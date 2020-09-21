@@ -6,7 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-docs-generator = "==0.1.2"
+docs-generator = "==0.1.6"
+nbconvert = "==6.0.4"
 
 [requires]
 python_version = "3.8"

@@ -11,6 +11,8 @@ docs-generator = "*"
 nbconvert = "==6.0.4"
 pydrive = "*"
 certifi = "*"
+pytesseract = "*"
+mss = "*"
 
 [requires]
 python_version = "3.8"

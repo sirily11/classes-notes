@@ -24,6 +24,8 @@ jobs:
         run: pipenv install
       - name: Build Docs
         run: pipenv run python3 run.py
+        env:
+          - ci: true
       - run: pipenv run mkdocs build
       - run: cp CNAME site/
       - name: Deploy

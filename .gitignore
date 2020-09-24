@@ -4,3 +4,6 @@ mkdocs.yml
 site/
 *.json
 Untitled
+*.lock
+screenshot_ocr/build
+screenshot_ocr/dist

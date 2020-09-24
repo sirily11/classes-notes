@@ -12,7 +12,8 @@ nbconvert = "==6.0.4"
 pydrive = "*"
 certifi = "*"
 pytesseract = "*"
-mss = "*"
+pyinstaller = "*"
+watchdog = "*"
 
 [requires]
 python_version = "3.8"

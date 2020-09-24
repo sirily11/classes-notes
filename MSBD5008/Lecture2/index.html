@@ -16,7 +16,7 @@
     
     
       
-        <title>Lecture 1 - Class Notes</title>
+        <title>Lecture2 - Class Notes</title>
       
     
     
@@ -50,7 +50,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#asset-returns" class="md-skip">
+        <a href="#undirected-vs-directed-networks" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Lecture 1
+              Lecture2
             
           </span>
         </div>
@@ -150,10 +150,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Msbd5008
@@ -171,11 +173,189 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../MSBD5008/Lecture2/" title="Lecture2" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Lecture2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Lecture2" class="md-nav__link md-nav__link--active">
       Lecture2
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#undirected-vs-directed-networks" class="md-nav__link">
+    Undirected vs Directed Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectivity-of-graphs" class="md-nav__link">
+    Connectivity of graphs
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectivity of graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#undirected-graph" class="md-nav__link">
+    Undirected graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directed-graph" class="md-nav__link">
+    Directed graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-graph" class="md-nav__link">
+    Complete Graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unweighted-graph" class="md-nav__link">
+    Unweighted graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-graph" class="md-nav__link">
+    Weighted graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-edges-self-loops" class="md-nav__link">
+    Self-edges (Self-loops)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multigraph" class="md-nav__link">
+    Multigraph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bipartite-graph" class="md-nav__link">
+    Bipartite Graph
+  </a>
+  
+    <nav class="md-nav" aria-label="Bipartite Graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degree-distribution-pk" class="md-nav__link">
+    Degree distribution P(k):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalized-histogram" class="md-nav__link">
+    Normalized histogram:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance" class="md-nav__link">
+    Distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diameter" class="md-nav__link">
+    Diameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering-coefficient" class="md-nav__link">
+    Clustering coefficient
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-as-a-graph" class="md-nav__link">
+    Web as a graph
+  </a>
+  
+    <nav class="md-nav" aria-label="Web as a graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#side-issues" class="md-nav__link">
+    Side issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -185,7 +365,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../MSBD5008/Lecture3/" title="Lecture3" class="md-nav__link">
+    <a href="../Lecture3/" title="Lecture3" class="md-nav__link">
       Lecture3
     </a>
   </li>
@@ -200,12 +380,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Msbd5006
@@ -223,20 +401,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Lecture 1" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../MSBD5006/Lecture%201/" title="Lecture 1" class="md-nav__link">
       Lecture 1
     </a>
-    
   </li>
 
         
@@ -246,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Lecture%202/" title="Lecture 2" class="md-nav__link">
+    <a href="../../MSBD5006/Lecture%202/" title="Lecture 2" class="md-nav__link">
       Lecture 2
     </a>
   </li>
@@ -471,8 +640,165 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#undirected-vs-directed-networks" class="md-nav__link">
+    Undirected vs Directed Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectivity-of-graphs" class="md-nav__link">
+    Connectivity of graphs
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectivity of graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#undirected-graph" class="md-nav__link">
+    Undirected graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directed-graph" class="md-nav__link">
+    Directed graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-graph" class="md-nav__link">
+    Complete Graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unweighted-graph" class="md-nav__link">
+    Unweighted graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-graph" class="md-nav__link">
+    Weighted graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-edges-self-loops" class="md-nav__link">
+    Self-edges (Self-loops)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multigraph" class="md-nav__link">
+    Multigraph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bipartite-graph" class="md-nav__link">
+    Bipartite Graph
+  </a>
+  
+    <nav class="md-nav" aria-label="Bipartite Graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degree-distribution-pk" class="md-nav__link">
+    Degree distribution P(k):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalized-histogram" class="md-nav__link">
+    Normalized histogram:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance" class="md-nav__link">
+    Distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diameter" class="md-nav__link">
+    Diameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering-coefficient" class="md-nav__link">
+    Clustering coefficient
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-as-a-graph" class="md-nav__link">
+    Web as a graph
+  </a>
+  
+    <nav class="md-nav" aria-label="Web as a graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#side-issues" class="md-nav__link">
+    Side issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -488,50 +814,140 @@
                   
                 
                 
-                <h1 id="asset-returns">Asset returns<a class="headerlink" href="#asset-returns" title="Permanent link">&para;</a></h1>
-<p>Let <span class="arithmatex">\(p_t\)</span> be the price of an asset at time t, and assume no dividend. One-period simple return or simple net return.</p>
-<div class="arithmatex">\[R_t = \frac{P_t}{P_t-1} - 1 = \frac{P_t - P_{t-1}}{P_{t-1}} \]</div>
-<p>Gross return</p>
-<div class="arithmatex">\[
-1 + P_t = \frac{P_t}{P_{t - 1}}\ or P_t = P_{t-1}(1+P_t)
-\]</div>
-<p>Multi-period simple return or the <strong>k-period</strong> simple net return </p>
-<div class="arithmatex">\[R_t(k) = \frac{P_t}{P_{t-k}}-1\]</div>
-<p>Gross return</p>
-<div class="arithmatex">\[1 + R_t(k) = \sum^{k -1 }_{j=0}(1+R_{t-j}) \]</div>
-<div class="codehilite"><pre><span></span><code>
+                  <h1>Lecture2</h1>
+                
+                <div class="codehilite"><pre><span></span><code>
 </code></pre></div>
 
 
-<h1 id="continues-compounding">Continues Compounding<a class="headerlink" href="#continues-compounding" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">exp</span>
+<h3 id="undirected-vs-directed-networks">Undirected vs Directed Networks<a class="headerlink" href="#undirected-vs-directed-networks" title="Permanent link">&para;</a></h3>
+<p>Undirected graph</p>
+<ul>
+<li>Links: undirected</li>
+<li>Example<ul>
+<li>Collaborations</li>
+<li>Friendship on Facebook</li>
+</ul>
+</li>
+</ul>
+<p>Directed</p>
+<ul>
+<li>Links: Directed</li>
+<li>Example<ul>
+<li>Phone calls <strong>(If you want to represent the relationship between caller and callee, then you can use undirected graph)</strong></li>
+<li>Following on Twitter</li>
+</ul>
+</li>
+</ul>
+<h3 id="connectivity-of-graphs">Connectivity of graphs<a class="headerlink" href="#connectivity-of-graphs" title="Permanent link">&para;</a></h3>
+<h4 id="undirected-graph">Undirected graph<a class="headerlink" href="#undirected-graph" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Connected:  Any two vertices can be joined by a path</p>
+</li>
+<li>
+<p>A disconnected graph is made up of two or more connected components.</p>
+</li>
+</ul>
+<p><strong>Bridge edge:</strong> If we erase it, the graph becomes disconnected.</p>
+<p><strong>Articulation point:</strong> If we erase it, the graph becomes disconnected</p>
+<p><strong>Isolated node:</strong> Node without any connected neighbors.</p>
+<h4 id="directed-graph">Directed graph<a class="headerlink" href="#directed-graph" title="Permanent link">&para;</a></h4>
+<p><strong>Strongly connected directed graph:</strong> Has a path from each node to every other node and vice versa</p>
+<p><strong>Weakly connected directed graph:</strong> Is connected if we disregard the edge directions</p>
+<p><strong>Directed Acyclic Graph:</strong> Has no cyclesL if u can reach v, the v cannot reach u.</p>
+<p>Strongly connected components: is a set of nodes S so that: </p>
+<ol>
+<li>Every pair of nodes in S can reach each other</li>
+<li>There is no larger set containing S with this property</li>
+</ol>
+<p>Node degree: The number of edges adjacent to node i</p>
+<p>Avg. degree: <span class="arithmatex">\(\hat{k} = \frac{1}{N}\)</span>, <span class="arithmatex">\(K_i = \frac{2E}{N}\)</span></p>
+<p>In directed networks we define an <strong>in-degree</strong> and <strong>out-degree</strong>. The total degree of a node is the sum of in-and out-degrees.</p>
+<h4 id="complete-graph">Complete Graph<a class="headerlink" href="#complete-graph" title="Permanent link">&para;</a></h4>
+<p>Maximum number edges in undirected graph on N nodes.</p>
+<div class="arithmatex">\[ E_{max} = \frac{N(N-1)}{2} \]</div>
+<p>A graph with the number of edges $E = E_{max} $ is a complete graph and its average degree is N - 1</p>
+<h4 id="unweighted-graph">Unweighted graph<a class="headerlink" href="#unweighted-graph" title="Permanent link">&para;</a></h4>
+<p>Graph without weight. For example, Friendship and sex.</p>
+<h4 id="weighted-graph">Weighted graph<a class="headerlink" href="#weighted-graph" title="Permanent link">&para;</a></h4>
+<p>Graph with weight. For example collaboration with internet roads.</p>
+<h4 id="self-edges-self-loops">Self-edges (Self-loops)<a class="headerlink" href="#self-edges-self-loops" title="Permanent link">&para;</a></h4>
+<p>Examples: Proteins, Hyperlinks (A web page link which points to itself)</p>
+<h4 id="multigraph">Multigraph<a class="headerlink" href="#multigraph" title="Permanent link">&para;</a></h4>
+<p>Examples: Communication, collaboration</p>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<table>
+  <tr>
+   <td><strong>Example</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>www
+   </td>
+   <td>Directed
+   </td>
+  </tr>
+  <tr>
+   <td>Facebook friendships
+   </td>
+   <td>Undirected, unweighted
+   </td>
+  </tr>
+  <tr>
+   <td>Citation networks
+   </td>
+   <td>Unweighted, directed, acyclic
+   </td>
+  </tr>
+  <tr>
+   <td>Collaboration networks
+   </td>
+   <td>Undirected multigraph or weighted graph
+   </td>
+  </tr>
+  <tr>
+   <td>Mobile phone calls
+   </td>
+   <td>directed
+   </td>
+  </tr>
+  <tr>
+   <td>Protein interactions
+   </td>
+   <td>Undirected, unweighted with self-interactions
+   </td>
+  </tr>
+</table>
 
-<span class="k">def</span> <span class="nf">pay_interest</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">payments</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">base</span> <span class="o">*</span> <span class="p">(</span> <span class="n">base</span> <span class="o">+</span> <span class="n">interest</span> <span class="o">/</span> <span class="n">payments</span><span class="p">)</span> <span class="o">**</span> <span class="n">payments</span>
-
-
-<span class="k">def</span> <span class="nf">pay_interest_continue</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">number_of_years</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">base</span> <span class="o">*</span> <span class="n">exp</span><span class="p">(</span> <span class="n">interest</span> <span class="o">*</span> <span class="n">number_of_years</span><span class="p">)</span>
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code><span class="err">pay_interest_continue(1, 0.1, 1)</span>
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code>1.1051709180756477
-</code></pre></div>
-
-<div class="arithmatex">\[
-R_t = log
-\]</div>
-<h2 id="log-return">Log return<a class="headerlink" href="#log-return" title="Permanent link">&para;</a></h2>
-<div class="arithmatex">\[r_{pt} = \sum_{i = 1}{n}w_ir_{it}\]</div>
-<h2 id="excess-return">Excess return<a class="headerlink" href="#excess-return" title="Permanent link">&para;</a></h2>
-<div class="arithmatex">\[Z_t = R_t - R_{0t}, z_t = r_t - r_{0t}\]</div>
-<p>where <span class="arithmatex">\(r_{0t}\)</span> denotes the log return of a reference
-asset (e.g. risk-free interest rate) such as shortterm
-U.S. Treasury bill return, etc..</p>
+<h3 id="bipartite-graph">Bipartite Graph<a class="headerlink" href="#bipartite-graph" title="Permanent link">&para;</a></h3>
+<p>A graph whose nodes can be divided into two disjoint sets U and V such that every link connects a node in U to one in V; that is U and V are independent sets.</p>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Authors-to-papers</li>
+<li>Actors-to-movies</li>
+</ol>
+<h4 id="degree-distribution-pk">Degree distribution P(k):<a class="headerlink" href="#degree-distribution-pk" title="Permanent link">&para;</a></h4>
+<p>Probability that a randomly chosen node has degree k.</p>
+<h4 id="normalized-histogram">Normalized histogram:<a class="headerlink" href="#normalized-histogram" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(P(k) = N_k / N\)</span></p>
+<h4 id="distance">Distance<a class="headerlink" href="#distance" title="Permanent link">&para;</a></h4>
+<p>Between a pair of nodes is defined as the number of edges along the shortest path connecting the nodes</p>
+<p>In directed graphs paths need to follow the direction of the arrows. So that distance is not symmetric <span class="arithmatex">\(h_{a,c} \neq h_{c,a}\)</span></p>
+<h4 id="diameter">Diameter<a class="headerlink" href="#diameter" title="Permanent link">&para;</a></h4>
+<p>The maximum distance (shortest graph) between any pair of nodes in a graph.</p>
+<h4 id="clustering-coefficient">Clustering coefficient<a class="headerlink" href="#clustering-coefficient" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(<span class="arithmatex">\(C_i = \frac{2e_i}{k_i(k_i - 1)}\)</span>\)</span> where <span class="arithmatex">\(e_i\)</span> is the number of edges between the neighbors of node i.</p>
+<h3 id="web-as-a-graph">Web as a graph<a class="headerlink" href="#web-as-a-graph" title="Permanent link">&para;</a></h3>
+<p>Nodes = Web pages</p>
+<p>Edges  = hyperlinks</p>
+<h4 id="side-issues">Side issues<a class="headerlink" href="#side-issues" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Dynamic pages created on the fly</li>
+<li>Dark matter - inaccessible database generated pages</li>
+</ol>
 <div class="codehilite"><pre><span></span><code>
 </code></pre></div>
                 
@@ -552,28 +968,14 @@ U.S. Treasury bill return, etc..</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../MSBD5008/Lecture3/" title="Lecture3" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Lecture3
-              </div>
-            </div>
-          </a>
         
-        
-          <a href="../Lecture%202/" title="Lecture 2" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Lecture3/" title="Lecture3" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Lecture 2
+                Lecture3
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

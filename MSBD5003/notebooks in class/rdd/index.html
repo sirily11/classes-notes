@@ -1,0 +1,1401 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+    
+    
+      
+        <title>Rdd - Class Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-do-i-make-an-rdd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Class Notes" class="md-header-nav__button md-logo" aria-label="Class Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Class Notes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Rdd
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Class Notes" class="md-nav__button md-logo" aria-label="Class Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Class Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Msbd5008
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5008" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5008
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5008/Lecture2/" class="md-nav__link">
+      Lecture2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5008/Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Msbd5006
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5006" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5006
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5006/Lecture%201/" class="md-nav__link">
+      Lecture 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5006/Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Msbd5012
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5012" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5012
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Lectures
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Lectures" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        Lectures
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Msbd5001
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5001" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5001
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture%203/" class="md-nav__link">
+      Lecture 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Msbd5003
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5003" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5003
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture2/" class="md-nav__link">
+      Lecture2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture5/" class="md-nav__link">
+      Lecture5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6" checked>
+    
+    <label class="md-nav__link" for="nav-5-6">
+      Notebooks in class
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Notebooks in class" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-6">
+        <span class="md-nav__icon md-icon"></span>
+        Notebooks in class
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PMI/" class="md-nav__link">
+      Pmi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Rdd
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Rdd
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-make-an-rdd" class="md-nav__link">
+    How do I make an RDD?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdd-operations" class="md-nav__link">
+    RDD operations
+  </a>
+  
+    <nav class="md-nav" aria-label="RDD operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rdd-actions" class="md-nav__link">
+    RDD actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closure" class="md-nav__link">
+    Closure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computing-pi-using-monte-carlo-simulation" class="md-nav__link">
+    Computing Pi using Monte Carlo simulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closure-and-persistence" class="md-nav__link">
+    Closure and Persistence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-value-pairs" class="md-nav__link">
+    Key-Value Pairs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-means-clustering" class="md-nav__link">
+    K-means clustering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagerank" class="md-nav__link">
+    PageRank
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join-vs-broadcast-variables" class="md-nav__link">
+    Join vs. Broadcast Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sparksql/" class="md-nav__link">
+      Sparksql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
+    
+    <label class="md-nav__link" for="nav-5-7">
+      Homeworks
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Homeworks" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-7">
+        <span class="md-nav__icon md-icon"></span>
+        Homeworks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../homeworks/hw1/" class="md-nav__link">
+      Hw1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-make-an-rdd" class="md-nav__link">
+    How do I make an RDD?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdd-operations" class="md-nav__link">
+    RDD operations
+  </a>
+  
+    <nav class="md-nav" aria-label="RDD operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rdd-actions" class="md-nav__link">
+    RDD actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closure" class="md-nav__link">
+    Closure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computing-pi-using-monte-carlo-simulation" class="md-nav__link">
+    Computing Pi using Monte Carlo simulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closure-and-persistence" class="md-nav__link">
+    Closure and Persistence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-value-pairs" class="md-nav__link">
+    Key-Value Pairs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-means-clustering" class="md-nav__link">
+    K-means clustering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagerank" class="md-nav__link">
+    PageRank
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join-vs-broadcast-variables" class="md-nav__link">
+    Join vs. Broadcast Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Rdd</h1>
+                
+                <h2 id="how-do-i-make-an-rdd">How do I make an RDD?<a class="headerlink" href="#how-do-i-make-an-rdd" title="Permanent link">&para;</a></h2>
+<p>RDDs can be created from stable storage or by transforming other RDDs. Run the cells below to create RDDs from files on the local drive.  All data files can be downloaded from https://www.cse.ust.hk/msbd5003/data/
+For example, https://www.cse.ust.hk/msbd5003/data/fruits.txt</p>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># Read data from local file system:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sc</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+
+<span class="n">fruits</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s1">&#39;../data/fruits.txt&#39;</span><span class="p">)</span>
+<span class="n">yellowThings</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s1">&#39;../data/yellowthings.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yellowThings</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>3.0.0
+[&#39;apple&#39;, &#39;banana&#39;, &#39;canary melon&#39;, &#39;grape&#39;, &#39;lemon&#39;, &#39;orange&#39;, &#39;pineapple&#39;, &#39;strawberry&#39;]
+[&#39;banana&#39;, &#39;bee&#39;, &#39;butter&#39;, &#39;canary melon&#39;, &#39;gold&#39;, &#39;lemon&#39;, &#39;pineapple&#39;, &#39;sunflower&#39;]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># Read data from HDFS :</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s1">&#39;hdfs://url:9000/pathname/fruits.txt&#39;</span><span class="p">)</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+</code></pre></div>
+
+<hr />
+<h2 id="rdd-operations">RDD operations<a class="headerlink" href="#rdd-operations" title="Permanent link">&para;</a></h2>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># map</span>
+<span class="n">fruitsReversed</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">fruit</span><span class="p">:</span> <span class="n">fruit</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="python codehilite"><pre><span></span><code><span class="c1"># fruitsReversed = fruits.map(lambda fruit: fruit[::-1])</span>
+<span class="n">fruitsReversed</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span>
+<span class="c1"># try changing the file and re-execute with and without cache</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitsReversed</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="c1"># What happens when you uncomment the first line and run the whole program again with cache()?</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;elppab&#39;, &#39;ananab&#39;, &#39;nolem yranac&#39;, &#39;parg&#39;, &#39;nomel&#39;, &#39;egnaro&#39;, &#39;elppaenip&#39;, &#39;yrrebwarts&#39;]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># filter</span>
+<span class="n">shortFruits</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">fruit</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shortFruits</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;grap&#39;, &#39;lemon&#39;]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># flatMap</span>
+<span class="n">characters</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">fruit</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">fruit</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">characters</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;b&#39;, &#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;, &#39;b&#39;, &#39;a&#39;, &#39;n&#39;, &#39;a&#39;, &#39;n&#39;, &#39;a&#39;, &#39;c&#39;, &#39;a&#39;, &#39;n&#39;, &#39;a&#39;, &#39;r&#39;, &#39;y&#39;, &#39; &#39;, &#39;m&#39;, &#39;e&#39;, &#39;l&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;, &#39;r&#39;, &#39;a&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;, &#39;m&#39;, &#39;o&#39;, &#39;n&#39;, &#39;o&#39;, &#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;g&#39;, &#39;e&#39;, &#39;p&#39;, &#39;i&#39;, &#39;n&#39;, &#39;e&#39;, &#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;, &#39;s&#39;, &#39;t&#39;, &#39;r&#39;, &#39;a&#39;, &#39;w&#39;, &#39;b&#39;, &#39;e&#39;, &#39;r&#39;, &#39;r&#39;, &#39;y&#39;]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># union</span>
+<span class="n">fruitsAndYellowThings</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">yellowThings</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitsAndYellowThings</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;bapple&#39;, &#39;banana&#39;, &#39;canary melon&#39;, &#39;grap&#39;, &#39;lemon&#39;, &#39;orange&#39;, &#39;pineapple&#39;, &#39;strawberry&#39;, &#39;banana&#39;, &#39;bee&#39;, &#39;butter&#39;, &#39;canary melon&#39;, &#39;gold&#39;, &#39;lemon&#39;, &#39;pineapple&#39;, &#39;sunflower&#39;]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># intersection</span>
+<span class="n">yellowFruits</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">yellowThings</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yellowFruits</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;pineapple&#39;, &#39;canary melon&#39;, &#39;lemon&#39;, &#39;banana&#39;]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># distinct</span>
+<span class="n">distinctFruitsAndYellowThings</span> <span class="o">=</span> <span class="n">fruitsAndYellowThings</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">distinctFruitsAndYellowThings</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;orange&#39;, &#39;pineapple&#39;, &#39;canary melon&#39;, &#39;lemon&#39;, &#39;bee&#39;, &#39;banana&#39;, &#39;butter&#39;, &#39;gold&#39;, &#39;sunflower&#39;, &#39;apple&#39;, &#39;grap&#39;, &#39;strawberry&#39;]
+</code></pre></div>
+<h3 id="rdd-actions">RDD actions<a class="headerlink" href="#rdd-actions" title="Permanent link">&para;</a></h3>
+<p>Following are examples of some of the common actions available. For a detailed list, see <a href="https://spark.apache.org/docs/2.0.0/programming-guide.html#actions">RDD Actions</a>.</p>
+<p>Run some transformations below to understand this better. Place the cursor in the cell and press <strong>SHIFT + ENTER</strong>.</p>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># collect</span>
+<span class="n">fruitsArray</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="n">yellowThingsArray</span> <span class="o">=</span> <span class="n">yellowThings</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruitsArray</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;apple&#39;, &#39;banana&#39;, &#39;canary melon&#39;, &#39;grap&#39;, &#39;lemon&#39;, &#39;orange&#39;, &#39;pineapple&#39;, &#39;strawberry&#39;]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># count</span>
+<span class="n">numFruits</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numFruits</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>8
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># take</span>
+<span class="n">first3Fruits</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">first3Fruits</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;apple&#39;, &#39;banana&#39;, &#39;canary melon&#39;]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># reduce</span>
+<span class="n">letterSet</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">fruit</span><span class="p">:</span> <span class="nb">set</span><span class="p">(</span><span class="n">fruit</span><span class="p">))</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letterSet</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;o&#39;, &#39;r&#39;, &#39;a&#39;, &#39;i&#39;, &#39;p&#39;, &#39;g&#39;, &#39;c&#39;, &#39; &#39;, &#39;l&#39;, &#39;y&#39;, &#39;e&#39;, &#39;w&#39;, &#39;n&#39;, &#39;b&#39;, &#39;m&#39;, &#39;t&#39;, &#39;s&#39;}
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="n">letterSet</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">fruit</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">fruit</span><span class="p">))</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letterSet</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;p&#39;, &#39;l&#39;, &#39;b&#39;, &#39;c&#39;, &#39;r&#39;, &#39;y&#39;, &#39;g&#39;, &#39;i&#39;, &#39;s&#39;, &#39;a&#39;, &#39;e&#39;, &#39;n&#39;, &#39; &#39;, &#39;m&#39;, &#39;o&#39;, &#39;t&#39;, &#39;w&#39;]
+</code></pre></div>
+<h3 id="closure">Closure<a class="headerlink" href="#closure" title="Permanent link">&para;</a></h3>
+<div class="python codehilite"><pre><span></span><code><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Wrong: Don&#39;t do this!!</span>
+<span class="k">def</span> <span class="nf">increment_counter</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">counter</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="n">x</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rdd</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="n">rdd</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">increment_counter</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+0
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">accum</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">accumulator</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">accum</span>
+    <span class="n">accum</span> <span class="o">+=</span> <span class="n">x</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">rdd</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">accum</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>-45
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">accum</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">accumulator</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">accum</span>
+    <span class="n">accum</span> <span class="o">+=</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">rdd</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">accum</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="c1">#print(a.reduce(lambda x, y: x+y))</span>
+<span class="n">a</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">accum</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rdd</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">))</span>
+
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">accum</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rdd</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>0
+45
+45
+45
+45
+</code></pre></div>
+<h3 id="computing-pi-using-monte-carlo-simulation">Computing Pi using Monte Carlo simulation<a class="headerlink" href="#computing-pi-using-monte-carlo-simulation" title="Permanent link">&para;</a></h3>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># From the official spark examples.</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">partitions</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="n">partitions</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">0</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">partitions</span><span class="p">)</span> \
+          <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pi is roughly&quot;</span><span class="p">,</span> <span class="mf">4.0</span> <span class="o">*</span> <span class="n">count</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Pi is roughly 3.140944
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># Example: glom</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">glom</span><span class="p">()</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">glom</span><span class="p">()</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+
+<span class="c1"># Weird behavior: Initially, random numbers are synched across all workers, but will get </span>
+<span class="c1"># out-of-sync after a large (e.g, 1000000) number of random numbers have been generated.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], [20, 21, 22, 23, 24, 25, 26, 27, 28, 29], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [50, 51, 52, 53, 54, 55, 56, 57, 58, 59], [60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [70, 71, 72, 73, 74, 75, 76, 77, 78, 79], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89], [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]]
+[[0.6608713426170987, 0.698767024318554, 0.1874105777790005, 0.7623702078433652, 0.8851287594440702, 0.31740294580255735, 0.19323310102732394, 0.42450071105921683, 0.5933781451859748, 0.7458943680790939], [0.7261502175930336, 0.22659503054053598, 0.9192074261481535, 0.4774662604141523, 0.7974422880272903, 0.2584976474338707, 0.6055611352765481, 0.5244790798752513, 0.6861813792912159, 0.5652815222674437], [0.27860057141024697, 0.27383515025078553, 0.9176819782462265, 0.417689753313761, 0.6135860183360143, 0.8162090147099693, 0.39224804876974406, 0.543173888187219, 0.3098912544023783, 0.633182881742779], [0.0952563896474653, 0.7477071810186972, 0.5004564582092008, 0.2614834043253954, 0.5982982446751687, 0.8544002333592715, 0.26000819037953216, 0.40177311792144454, 0.03851083747397188, 0.05167636277510712], [0.9726302497724043, 0.42432064255976365, 0.9305610323744404, 0.771694551386715, 0.6789841281422876, 0.9487832709253969, 0.4943030306526911, 0.22888583384514705, 0.6165263440265218, 0.8948635092093183], [0.9816006872849989, 0.3233518004555158, 0.6660672115030636, 0.9921564654020117, 0.9574487554669273, 0.00033642413291157247, 0.5729463981674527, 0.63676146970985, 0.1068707761119706, 0.4974835849045728], [0.6877782810075579, 0.11000878013616322, 0.6630366287015564, 0.0320757478156235, 0.5550374523078817, 0.11429763248899893, 0.7746616174182379, 0.6935564378314162, 0.6081187039755812, 0.3594774747771995], [0.3402744125431225, 0.8533066685831103, 0.18605963113570156, 0.9700428171414653, 0.9046533776474858, 0.4199976147427207, 0.01833313615444565, 0.5003118405702941, 0.9167261953361863, 0.6543553598701435], [0.5463089308369264, 0.19187434980340723, 0.5311179490604816, 0.7210872364087648, 0.25848050944241396, 0.9138829006068386, 0.5015098582184656, 0.9245322749204768, 0.4746635193819774, 0.733561516539988], [0.5924804586325896, 0.44157691425623313, 0.06474182310396659, 0.3705313104712945, 0.218280453275444, 0.911250263493956, 0.4908690024649712, 0.031427016100674665, 0.3749922950484815, 0.29534800562581187]]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># Example: mapPartition and mapPartitionWithIndex</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">glom</span><span class="p">()</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">it</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="k">yield</span> <span class="n">s</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">mapPartitions</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">it</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">index</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="k">yield</span> <span class="n">s</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">mapPartitionsWithIndex</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[[0, 1, 2, 3, 4], [5, 6, 7, 8, 9], [10, 11, 12, 13, 14], [15, 16, 17, 18, 19]]
+[0, 1, 3, 6, 10, 5, 11, 18, 26, 35, 10, 21, 33, 46, 60, 15, 31, 48, 66, 85]
+[0, 1, 3, 6, 10, 6, 12, 19, 27, 36, 12, 23, 35, 48, 62, 18, 34, 51, 69, 88]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># Correct version</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">partitions</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="n">partitions</span>
+
+<span class="n">seed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">it</span><span class="p">):</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">seed</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+        <span class="k">yield</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">0</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">partitions</span><span class="p">)</span> \
+          <span class="o">.</span><span class="n">mapPartitionsWithIndex</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pi is roughly&quot;</span><span class="p">,</span> <span class="mf">4.0</span> <span class="o">*</span> <span class="n">count</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Pi is roughly 3.141832
+</code></pre></div>
+<h3 id="closure-and-persistence">Closure and Persistence<a class="headerlink" href="#closure-and-persistence" title="Permanent link">&para;</a></h3>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># RDD variables are references</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">A</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># Linear-time selection</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">26</span><span class="p">]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+    <span class="n">A1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">A2</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">A1</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+    <span class="n">A2</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="n">A1</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">mid</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">break</span>
+
+    <span class="k">if</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">mid</span><span class="p">:</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">A1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">A2</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>43
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[12, 21, 26, 34, 43, 44, 47, 56, 67, 74, 89]
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
+<span class="c1"># B.cache()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>5
+5
+</code></pre></div>
+<div class="python codehilite"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
+<span class="c1"># B.cache()</span>
+<span class="n">B</span><span class="o">.</span><span class="n">unpersist</span><span class="p">()</span>
+<span class="c1"># print(B.take(10))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">#print(B.take(10))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="c1"># collect() doesn&#39;t always re-collect data - bad design!</span>
+<span class="c1"># Always use take() instead of collect()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 1, 2, 3, 4]
+[0, 1, 2, 3, 4]
+</code></pre></div>
+<h3 id="key-value-pairs">Key-Value Pairs<a class="headerlink" href="#key-value-pairs" title="Permanent link">&para;</a></h3>
+<div class="python codehilite"><pre><span></span><code><span class="c1"># reduceByKey</span>
+<span class="n">numFruitsByLength</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">fruit</span><span class="p">:</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fruit</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">reduceByKey</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numFruitsByLength</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+
+<span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s1">&#39;../data/course.txt&#39;</span><span class="p">)</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> \
+              <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> \
+              <span class="o">.</span><span class="n">reduceByKey</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">sortByKey</span><span class="p">()</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="python codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">sortBy</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="python codehilite"><pre><span></span><code><span class="c1"># Join simple example</span>
+
+<span class="n">products</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Apple&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Orange&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;TV&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Computer&quot;</span><span class="p">)])</span>
+<span class="c1">#trans = sc.parallelize([(1, 134, &quot;OK&quot;), (3, 34, &quot;OK&quot;), (5, 162, &quot;Error&quot;), (1, 135, &quot;OK&quot;), (2, 53, &quot;OK&quot;), (1, 45, &quot;OK&quot;)])</span>
+<span class="n">trans</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">162</span><span class="p">,</span> <span class="s2">&quot;Error&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">135</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">53</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">))])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">products</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">trans</span><span class="p">)</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</code></pre></div>
+
+<h3 id="k-means-clustering">K-means clustering<a class="headerlink" href="#k-means-clustering" title="Permanent link">&para;</a></h3>
+<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">parseVector</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
+
+<span class="k">def</span> <span class="nf">closestPoint</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">centers</span><span class="p">):</span>
+    <span class="n">bestIndex</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">closest</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;+inf&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centers</span><span class="p">)):</span>
+        <span class="n">tempDist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p</span> <span class="o">-</span> <span class="n">centers</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">tempDist</span> <span class="o">&lt;</span> <span class="n">closest</span><span class="p">:</span>
+            <span class="n">closest</span> <span class="o">=</span> <span class="n">tempDist</span>
+            <span class="n">bestIndex</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">bestIndex</span>
+
+<span class="c1"># The data file can be downloaded at http://www.cse.ust.hk/msbd5003/data/kmeans_data.txt</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s1">&#39;../data/kmeans_data.txt&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  
+
+<span class="c1"># The data file can be downloaded at http://www.cse.ust.hk/msbd5003/data/kmeans_bigdata.txt</span>
+<span class="c1"># lines = sc.textFile(&#39;../data/kmeans_bigdata.txt&#39;, 5)  </span>
+<span class="c1"># lines is an RDD of strings</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">convergeDist</span> <span class="o">=</span> <span class="mf">0.01</span>  
+<span class="c1"># terminate algorithm when the total distance from old center to new centers is less than this value</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">parseVector</span><span class="p">)</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span> <span class="c1"># data is an RDD of arrays</span>
+
+<span class="n">kCenters</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">takeSample</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># intial centers as a list of arrays</span>
+<span class="n">tempDist</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># total distance from old centers to new centers</span>
+
+<span class="k">while</span> <span class="n">tempDist</span> <span class="o">&gt;</span> <span class="n">convergeDist</span><span class="p">:</span>
+    <span class="n">closest</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="p">(</span><span class="n">closestPoint</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">kCenters</span><span class="p">),</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+    <span class="c1"># for each point in data, find its closest center</span>
+    <span class="c1"># closest is an RDD of tuples (index of closest center, (point, 1))</span>
+
+    <span class="n">pointStats</span> <span class="o">=</span> <span class="n">closest</span><span class="o">.</span><span class="n">reduceByKey</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">:</span> <span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">p2</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="c1"># pointStats is an RDD of tuples (index of center,</span>
+    <span class="c1"># (array of sums of coordinates, total number of points assigned))</span>
+
+    <span class="n">newCenters</span> <span class="o">=</span> <span class="n">pointStats</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">st</span><span class="p">:</span> <span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">st</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">st</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+    <span class="c1"># compute the new centers</span>
+
+    <span class="n">tempDist</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">kCenters</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="ow">in</span> <span class="n">newCenters</span><span class="p">)</span>
+    <span class="c1"># compute the total disctance from old centers to new centers</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="ow">in</span> <span class="n">newCenters</span><span class="p">:</span>
+        <span class="n">kCenters</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final centers: &quot;</span><span class="p">,</span> <span class="n">kCenters</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="pagerank">PageRank<a class="headerlink" href="#pagerank" title="Permanent link">&para;</a></h3>
+<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+
+<span class="k">def</span> <span class="nf">computeContribs</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="n">rank</span><span class="p">):</span>
+    <span class="c1"># Calculates URL contributions to the rank of other URLs.</span>
+    <span class="n">num_urls</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">rank</span> <span class="o">/</span> <span class="n">num_urls</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">parseNeighbors</span><span class="p">(</span><span class="n">urls</span><span class="p">):</span>
+    <span class="c1"># Parses a urls pair string into urls pair.&quot;&quot;&quot;</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">urls</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Loads in input file. It should be in format of:</span>
+<span class="c1">#     URL         neighbor URL</span>
+<span class="c1">#     URL         neighbor URL</span>
+<span class="c1">#     URL         neighbor URL</span>
+<span class="c1">#     ...</span>
+
+<span class="c1"># The data file can be downloaded at http://www.cse.ust.hk/msbd5003/data/*</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s2">&quot;../data/pagerank_data.txt&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># lines = sc.textFile(&quot;../data/dblp.in&quot;, 5)</span>
+
+<span class="n">numOfIterations</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Loads all URLs from input file and initialize their neighbors. </span>
+<span class="n">links</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">urls</span><span class="p">:</span> <span class="n">parseNeighbors</span><span class="p">(</span><span class="n">urls</span><span class="p">))</span> \
+             <span class="o">.</span><span class="n">groupByKey</span><span class="p">()</span>
+
+<span class="c1"># Loads all URLs with other URL(s) link to from input file </span>
+<span class="c1"># and initialize ranks of them to one.</span>
+<span class="n">ranks</span> <span class="o">=</span> <span class="n">links</span><span class="o">.</span><span class="n">mapValues</span><span class="p">(</span><span class="k">lambda</span> <span class="n">neighbors</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="c1"># Calculates and updates URL ranks continuously using PageRank algorithm.</span>
+<span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numOfIterations</span><span class="p">):</span>
+    <span class="c1"># Calculates URL contributions to the rank of other URLs.</span>
+    <span class="n">contribs</span> <span class="o">=</span> <span class="n">links</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span> \
+                    <span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">url_urls_rank</span><span class="p">:</span>
+                             <span class="n">computeContribs</span><span class="p">(</span><span class="n">url_urls_rank</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                                             <span class="n">url_urls_rank</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="c1"># After the join, each element in the RDD is of the form</span>
+    <span class="c1"># (url, (list of neighbor urls, rank))</span>
+
+    <span class="c1"># Re-calculates URL ranks based on neighbor contributions.</span>
+    <span class="c1"># ranks = contribs.reduceByKey(add).mapValues(lambda rank: rank * 0.85 + 0.15)</span>
+    <span class="n">ranks</span> <span class="o">=</span> <span class="n">contribs</span><span class="o">.</span><span class="n">reduceByKey</span><span class="p">(</span><span class="n">add</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.85</span> <span class="o">+</span> <span class="mf">0.15</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ranks</span><span class="o">.</span><span class="n">top</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</code></pre></div>
+
+<h3 id="join-vs-broadcast-variables">Join vs. Broadcast Variables<a class="headerlink" href="#join-vs-broadcast-variables" title="Permanent link">&para;</a></h3>
+<div class="python codehilite"><pre><span></span><code><span class="n">products</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Apple&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Orange&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;TV&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Computer&quot;</span><span class="p">)])</span>
+<span class="n">trans</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">162</span><span class="p">,</span> <span class="s2">&quot;Error&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">135</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">53</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">))])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">trans</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">products</span><span class="p">)</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="python codehilite"><pre><span></span><code><span class="n">products</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;TV&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;Computer&quot;</span><span class="p">}</span>
+<span class="n">trans</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">162</span><span class="p">,</span> <span class="s2">&quot;Error&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">135</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">53</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">))])</span>
+
+<span class="n">broadcasted_products</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">products</span><span class="p">)</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">broadcasted_products</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1">#  results = trans.map(lambda x: (x[0], products[x[0]], x[1]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../PMI/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Pmi
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../sparksql/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Sparksql
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ['instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../js/expand.js"></script>
+      
+    
+  </body>
+</html>

@@ -37,11 +37,15 @@ def download_file(drive: GoogleDrive, prev_path: str, folder_id: str, target_fol
             download_file(drive=drive, prev_path=new_prev_path, folder_id=file_id, target_folder=target_folder)
         else:
             try:
-                print(f"Downloading file: {name}")
+
                 gfile = drive.CreateFile({'id': file_id})
                 download_mimeType = MIMETYPES.get(mimetype)
+                print(f"Downloading file: {name}, mimeType: {mimetype}")
                 if download_mimeType:
                     gfile.GetContentFile(str(download_path), mimetype=download_mimeType)
+                else:
+                    if 'ipynb' in name:
+                        gfile.GetContentFile(str(download_path), mimetype="application/vnd.jupyter")
 
             except Exception as e:
                 print(name, e)

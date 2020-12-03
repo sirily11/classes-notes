@@ -1,0 +1,1521 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>Lecture6 - Class Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#similarity-and-dissimilarity" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Class Notes" class="md-header-nav__button md-logo" aria-label="Class Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Class Notes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Lecture6
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Class Notes" class="md-nav__button md-logo" aria-label="Class Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Class Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    <label class="md-nav__link" for="nav-1">
+      Msbd5001
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5001" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5001
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Lecture%203/" class="md-nav__link">
+      Lecture 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Lecture%209/" class="md-nav__link">
+      Lecture 9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Lecture6
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Lecture6
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attibute-type" class="md-nav__link">
+    Attibute Type
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-7" type="checkbox" id="nav-1-7" >
+    <label class="md-nav__link" for="nav-1-7">
+      Project
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Project" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-7">
+        <span class="md-nav__icon md-icon"></span>
+        Project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project/Group%20Project/" class="md-nav__link">
+      Group project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project/Individual%20Project/" class="md-nav__link">
+      Individual project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project/LSTM/" class="md-nav__link">
+      Lstm
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Msbd5006
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5006" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5006
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5006/Lecture%201/" class="md-nav__link">
+      Lecture 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5006/Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Msbd5008
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5008" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5008
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5008/Lecture2/" class="md-nav__link">
+      Lecture2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5008/Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5008/Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5008/Lecture5/" class="md-nav__link">
+      Lecture5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5008/Lectyre6/" class="md-nav__link">
+      Lectyre6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" >
+    <label class="md-nav__link" for="nav-3-6">
+      Homework
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Homework" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon"></span>
+        Homework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5008/homework/homework1/" class="md-nav__link">
+      Homework1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      Msbd5012
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5012" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5012
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
+    <label class="md-nav__link" for="nav-4-1">
+      Lectures
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Lectures" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        Lectures
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5012/lectures/Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5012/lectures/Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5012/lectures/Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5012/lectures/Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5012/lectures/Lecture8/" class="md-nav__link">
+      Lecture8
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      Msbd5003
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5003" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5003
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/Lecture2/" class="md-nav__link">
+      Lecture2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/Lecture5/" class="md-nav__link">
+      Lecture5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/Lecture6/" class="md-nav__link">
+      Lecture6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/Lecture7/" class="md-nav__link">
+      Lecture7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/Lecture8/" class="md-nav__link">
+      Lecture8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9" >
+    <label class="md-nav__link" for="nav-5-9">
+      Homeworks
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Homeworks" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-9">
+        <span class="md-nav__icon md-icon"></span>
+        Homeworks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/homeworks/HW4/" class="md-nav__link">
+      Hw4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/homeworks/hw1/" class="md-nav__link">
+      Hw1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/homeworks/hw2/" class="md-nav__link">
+      Hw2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/homeworks/hw3/" class="md-nav__link">
+      Hw3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-10" type="checkbox" id="nav-5-10" >
+    <label class="md-nav__link" for="nav-5-10">
+      Notebooks in class
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Notebooks in class" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-10">
+        <span class="md-nav__icon md-icon"></span>
+        Notebooks in class
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/notebooks%20in%20class/DC/" class="md-nav__link">
+      Dc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/notebooks%20in%20class/PMI/" class="md-nav__link">
+      Pmi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/notebooks%20in%20class/graph/" class="md-nav__link">
+      Graph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/notebooks%20in%20class/internal/" class="md-nav__link">
+      Internal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/notebooks%20in%20class/rdd/" class="md-nav__link">
+      Rdd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/notebooks%20in%20class/sparksql/" class="md-nav__link">
+      Sparksql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-11" type="checkbox" id="nav-5-11" >
+    <label class="md-nav__link" for="nav-5-11">
+      Projects
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Projects" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-11">
+        <span class="md-nav__icon md-icon"></span>
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MSBD5003/projects/Project/" class="md-nav__link">
+      Project
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attibute-type" class="md-nav__link">
+    Attibute Type
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="similarity-and-dissimilarity">Similarity and Dissimilarity<a class="headerlink" href="#similarity-and-dissimilarity" title="Permanent link">&para;</a></h1>
+<p>Similarity is the numerical measure of how alike two data
+objects are.</p>
+<p>Similarity is important.</p>
+<p>It is the basic component of many data processing techniques,
+such as
+- data integration
+- data mining: classication, clustering, recommendation,
+anomaly detection</p>
+<p>Dissimilarity is the numerical measure of how two objects are different.</p>
+<p>The term distance is frequently used as a synonym for dissimilarity.</p>
+<h2 id="attibute-type">Attibute Type<a class="headerlink" href="#attibute-type" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Norminal (Categorical)</li>
+<li>Ordinal</li>
+<li>Interval or Ratio</li>
+</ul>
+<h1 id="string-matching">String Matching:<a class="headerlink" href="#string-matching" title="Permanent link">&para;</a></h1>
+<p>Matching strings often appear quite dierently
+- Typing and OCR errors: David Smith vs. Davod Smith
+- Dierent formatting convertions: 10/8 vs Oct 8
+- Custom abbreviation, shortening, or omission:
+Daniel Walker Herbert Smith vs. Dan W. Smith
+- Dierent names, nick names: William Smith vs. Bill Smith
+- Shuing parts of strings: Dept. of Computer Science, UST vs.
+Computer Science Dept., UST</p>
+<div class="codehilite"><pre><span></span><code><span class="err">namea = &quot;Dave Smith&quot;</span>
+<span class="err">nameb = &#39;David D. Smith&#39;</span>
+</code></pre></div>
+
+<h2 id="edit-distance">Edit Distance<a class="headerlink" href="#edit-distance" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[min \begin{cases}d(i-1, j) + 1\\ d(i, j-1)+1\\ d(i-1, j-1) +1\ if x_1 \neq y_j \\ d(i-1,j-1)\ if x_1 =y_1 \end{cases}\]</div>
+<div class="codehilite"><pre><span></span><code> <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+ <span class="k">def</span> <span class="nf">minDistance</span><span class="p">(</span><span class="n">word1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="c1"># padding one whitespace for empty string representation</span>
+        <span class="n">word_1</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">word1</span>
+        <span class="n">word_2</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">word2</span>
+
+        <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_2</span><span class="p">)</span>
+
+        <span class="n">min_edit_dist</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="p">]</span>
+
+        <span class="c1"># initialization for top row</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+            <span class="n">min_edit_dist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+
+        <span class="c1"># initialization for left-most column</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+            <span class="n">min_edit_dist</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span>
+
+        <span class="c1"># compute minimum edit distance with optimal substructure</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+
+                <span class="k">if</span> <span class="n">word_1</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="n">word_2</span><span class="p">[</span><span class="n">x</span><span class="p">]:</span>
+                    <span class="c1"># current character match, no need to edit</span>
+                    <span class="n">min_edit_dist</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">min_edit_dist</span><span class="p">[</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># current character mismatch, choose the method of lowest cost, among character replacement, character addition, or character deletion</span>
+                    <span class="n">min_edit_dist</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span> <span class="n">min_edit_dist</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">min_edit_dist</span><span class="p">[</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">x</span><span class="p">],</span> <span class="n">min_edit_dist</span><span class="p">[</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="n">pprint</span><span class="p">(</span><span class="n">min_edit_dist</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">min_edit_dist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">minDistance(namea, nameb)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+ [1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+ [2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+ [3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+ [4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+ [5, 4, 3, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+ [6, 5, 4, 3, 3, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9],
+ [7, 6, 5, 4, 4, 4, 4, 4, 4, 5, 6, 5, 6, 7, 8],
+ [8, 7, 6, 5, 4, 5, 5, 5, 5, 5, 6, 6, 5, 6, 7],
+ [9, 8, 7, 6, 5, 5, 6, 6, 6, 6, 6, 7, 6, 5, 6],
+ [10, 9, 8, 7, 6, 6, 6, 7, 7, 7, 7, 7, 7, 6, 5]]
+
+
+
+
+
+5
+</code></pre></div>
+<h2 id="needleman-wunch-measure">Needleman wunch measure<a class="headerlink" href="#needleman-wunch-measure" title="Permanent link">&para;</a></h2>
+<p>initialize matrix of size (n + 1)x(m + 1) where s(a; b) is the element at
+the a􀀀th row and b􀀀th column.</p>
+<p>fill matrix: <span class="arithmatex">\(s(i,0) = -i*c_g, s(0,j)=-j*c_g\)</span></p>
+<div class="arithmatex">\[s(i, j) = max \begin{cases} s(u - 1, j) - c_g\\ 
+s(i, j-1)-c_g\\
+s(i-1,j-1)=c(x_i,y_j)
+\end{cases}\]</div>
+<div class="codehilite"><pre><span></span><code> <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="k">def</span> <span class="nf">find_match</span><span class="p">(</span><span class="n">word1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cg</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">cm</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">word1</span> <span class="o">==</span> <span class="n">word2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">c</span>
+    <span class="k">elif</span> <span class="n">word1</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="ow">or</span> <span class="n">word2</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">cg</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">cm</span>
+
+<span class="k">def</span> <span class="nf">needle_man</span><span class="p">(</span><span class="n">word1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">cg</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cm</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    cg: gap_penalty</span>
+<span class="sd">    c: match award</span>
+<span class="sd">    cm: mismatch penalty</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># padding one whitespace for empty string representation</span>
+    <span class="n">word_1</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">word1</span>
+    <span class="n">word_2</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">word2</span>
+
+    <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_2</span><span class="p">)</span>
+
+    <span class="n">s</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">w</span> <span class="p">)</span> <span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span> <span class="p">)</span> <span class="p">]</span>
+
+
+    <span class="c1"># initialization for top row</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span> <span class="p">):</span>
+        <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">j</span> <span class="o">*</span> <span class="n">cg</span>
+
+    <span class="c1"># initialization for left-most column</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="p">):</span>
+        <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">i</span> <span class="o">*</span> <span class="n">cg</span>
+
+
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span> <span class="p">):</span>
+            <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">cg</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">cg</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">find_match</span><span class="p">(</span><span class="n">word_1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">word_2</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">cg</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span><span class="n">cm</span><span class="p">))</span>
+
+
+
+    <span class="n">pprint</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">needle_man(&quot;dva&quot;, &quot;deeve&quot;, c=2)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[[0, -1, -2, -3, -4, -5],
+ [-1, 2, 1, 0, -1, -2],
+ [-2, 1, 1, 0, 2, 1],
+ [-3, 0, 0, 0, 1, 1]]
+
+
+
+
+
+1
+</code></pre></div>
+<h2 id="affine-gap-measure">Affine gap measure<a class="headerlink" href="#affine-gap-measure" title="Permanent link">&para;</a></h2>
+<p>Define x = <span class="arithmatex">\(x_1x_2...x_n\)</span>; y = <span class="arithmatex">\(y_1y_2..y_m\)</span> where xi and yj are the i-th and
+j-th prefixes of x and y</p>
+<p>Initialization:</p>
+<ul>
+<li><span class="arithmatex">\(M(0, 0) = 0, l_x(0,0)=-c_o, l_u(0,0)=-c_o\)</span></li>
+<li><span class="arithmatex">\(l_x(i,0)=-c_o - c_r * (i - 1)\)</span>
+-<span class="arithmatex">\(l_y(0, j) = -c_o - c_r * (j - 1)\)</span></li>
+<li>Other cells in top row and leftmost column = <span class="arithmatex">\(-\infty\)</span></li>
+</ul>
+<div class="arithmatex">\[M(i, j) = max \begin{cases}
+M(i -1, j-1)+c(x_i,y_i)\\
+l_x(i - 1, j -1) + c(x_i,y_i)\\
+l_y(u - 1, j-1)+c(x_i, y_i)
+\end{cases} \]</div>
+<div class="arithmatex">\[ 
+l_x(i, j) = max\begin{cases}
+M(i - 1, j) - c_o \\ l_x(i - 1, j) - c_r \end{cases}
+\]</div>
+<div class="arithmatex">\[ 
+l_y(i, j) = max\begin{cases}
+M(i , j - 1) - c_o \\ l_y(i, j - 1) - c_r \end{cases}
+\]</div>
+<p>where <span class="arithmatex">\(c_o\)</span> is the cost of opening a gap, <span class="arithmatex">\(c_r\)</span> is the cost of continuing a gap, <span class="arithmatex">\((x_i, y_j)\)</span> is the score for correspoding character <span class="arithmatex">\(x_i\)</span> with <span class="arithmatex">\(y_j\)</span> in the score matrix.</p>
+<p>Score: max(m, ix, iy)</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
+
+<span class="k">def</span> <span class="nf">find_match</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span> <span class="n">word2</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">penalty</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">word1</span> <span class="o">==</span> <span class="n">word2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">reward</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">penalty</span>
+
+
+<span class="k">def</span> <span class="nf">affine_gap</span><span class="p">(</span><span class="n">word1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">co</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cr</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="n">cg</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cm</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    co: cost of opening a gap</span>
+<span class="sd">    cm: cost of continuing the gap</span>
+<span class="sd">    cg: gap_penalty</span>
+<span class="sd">    c: match award</span>
+<span class="sd">    cm: mismatch penalty</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># padding one whitespace for empty string representation</span>
+    <span class="n">word_1</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">word1</span>
+    <span class="n">word_2</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">word2</span>
+
+    <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_2</span><span class="p">)</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span> <span class="o">-</span><span class="n">inf</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">w</span> <span class="p">)</span> <span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span> <span class="p">)</span> <span class="p">]</span>
+    <span class="n">i_x</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span> <span class="o">-</span><span class="n">inf</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">w</span> <span class="p">)</span> <span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span> <span class="p">)</span> <span class="p">]</span>
+    <span class="n">i_y</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span> <span class="o">-</span><span class="n">inf</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">w</span> <span class="p">)</span> <span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">h</span> <span class="p">)</span> <span class="p">]</span>
+
+    <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i_x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">co</span>
+    <span class="n">i_y</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">co</span>
+
+
+    <span class="c1"># initialization for top row</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span> <span class="p">):</span>
+        <span class="n">i_y</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">co</span> <span class="o">-</span> <span class="n">cr</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># initialization for left-most column</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="p">):</span>
+        <span class="n">i_x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">co</span> <span class="o">-</span> <span class="n">cr</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span> <span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span> <span class="p">):</span>
+            <span class="n">match_reward</span> <span class="o">=</span> <span class="n">find_match</span><span class="p">(</span><span class="n">word_1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">word_2</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">reward</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="n">cm</span><span class="p">)</span>
+            <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">match_reward</span><span class="p">,</span> <span class="n">i_x</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">match_reward</span><span class="p">,</span> <span class="n">i_y</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">match_reward</span><span class="p">)</span>
+            <span class="n">i_x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">co</span><span class="p">,</span> <span class="n">i_x</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">cr</span><span class="p">)</span>
+            <span class="n">i_y</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">co</span><span class="p">,</span> <span class="n">i_y</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">cr</span><span class="p">)</span>
+
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;m: &quot;</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;i_x: &quot;</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">i_x</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;i_y: &quot;</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">i_y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">i_x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">i_y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">affine_gap(&quot;AAT&quot;, &quot;ACACT&quot;, c=1, co=4, cr=1)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>m: 
+[[0, -inf, -inf, -inf, -inf, -inf],
+ [-inf, 1, -5, -4, -7, -8],
+ [-inf, -3, 0, -2, -5, -6],
+ [-inf, -6, -4, -1, -3, -4]]
+i_x: 
+[[-4, -inf, -inf, -inf, -inf, -inf],
+ [-4, -inf, -inf, -inf, -inf, -inf],
+ [-5, -3, -9, -8, -11, -12],
+ [-6, -4, -4, -6, -9, -10]]
+i_y: 
+[[-4, -4, -5, -6, -7, -8],
+ [-inf, -inf, -3, -4, -5, -6],
+ [-inf, -inf, -7, -4, -5, -6],
+ [-inf, -inf, -10, -8, -5, -6]]
+
+
+
+
+
+-4
+</code></pre></div>
+<h2 id="smith-waterman-measure">Smith-Waterman Measure<a class="headerlink" href="#smith-waterman-measure" title="Permanent link">&para;</a></h2>
+<p>Initialization:
+- initialize matrix of size (n + 1)x(m + 1) where s(a; b) is the
+element at the a-th row and b-th column.
+-  fill matrix: s(i ; 0) = 0, s(0; j) = 0</p>
+<div class="arithmatex">\[s(i, j) = max= \begin
+{cases} 0 \\
+s_i - 1, j)-c_g\\
+s(i, j-1)-c_g\\
+s(i-1,j-1)+c(x_i,y_i)
+\end{cases}\]</div>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">smith_waterman</span><span class="p">(</span><span class="nl">word1</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">,</span><span class="w"> </span><span class="nl">word2</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">,</span><span class="w"> </span><span class="n">cm</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">cg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">int</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+<span class="ss">    cg: gap_penalty</span>
+<span class="ss">    c: match award</span>
+<span class="ss">    cm: mismatch penalty</span>
+<span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">padding</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">whitespace</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">representation</span><span class="w"></span>
+<span class="w">    </span><span class="n">word_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">word1</span><span class="w"></span>
+<span class="w">    </span><span class="n">word_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">word2</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">word_1</span><span class="p">),</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">word_2</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n"> [ 0 for _ in range (w ) </span><span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="err">]</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">initialization</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">top</span><span class="w"> </span><span class="k">row</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">s</span><span class="o">[</span><span class="n">0</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">initialization</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nf">left</span><span class="o">-</span><span class="n">most</span><span class="w"> </span><span class="k">column</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">            </span><span class="n">match_reward</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find_match</span><span class="p">(</span><span class="n">word_1</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">word_2</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">reward</span><span class="o">=</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">penalty</span><span class="o">=</span><span class="n">cg</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">[</span><span class="n">i - 1</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cg</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j - 1</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cg</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">[</span><span class="n">i - 1</span><span class="o">][</span><span class="n">j - 1</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">match_reward</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">pprint</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="o">[</span><span class="n">-1</span><span class="o">][</span><span class="n">-1</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">smith_waterman(&quot; avd&quot;, &quot;dave&quot;)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[[0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 1, 0, 0],
+ [0, 0, 0, 2, 1],
+ [0, 1, 0, 1, 1]]
+
+
+
+
+
+1
+</code></pre></div>
+<h1 id="set-base">Set base<a class="headerlink" href="#set-base" title="Permanent link">&para;</a></h1>
+<p>View strings as sets or multi-sets of tokens
+Common methods to generate tokens</p>
+<ul>
+<li>words delimited by space<ul>
+<li>e.g. for the string \david smith", the tokens are \david" and
+\smith"</li>
+</ul>
+</li>
+<li>stem the words if necessary</li>
+<li>remove stop words (e.g. the, and of)
+I q-grams, substrings of length q<ul>
+<li>e.g. for the string \david smith", the set of 3-grams are ##d, #da, dav, avi, ..., h##</li>
+<li>special character # to handle the start and end of string
+fkccecia,</li>
+</ul>
+</li>
+</ul>
+<h2 id="overlap-measure">Overlap Measure<a class="headerlink" href="#overlap-measure" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Let Bx = set of tokens generated for string x</p>
+</li>
+<li>
+<p>Let By = set of tokens generated for string y</p>
+</li>
+<li>
+<p>returns the number of common tokens
+<span class="arithmatex">\(<span class="arithmatex">\(O(x, y) = |B_x \cap B_y |\)</span>\)</span>
+</p>
+</li>
+<li>E.g., x = dave, y = dav, considering 2-grams
+$$
+B_x = {#d, da, av, ve, e# }$$</li>
+</ul>
+<div class="arithmatex">\[
+B_y = \{\#d,da, av, v\# \}$$
+$$
+O(x, y) = 3
+\]</div>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">token</span><span class="p">(</span><span class="n">word</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">max_token_len</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">sets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">new_word</span> <span class="o">=</span> <span class="n">f</span><span class="ss">&quot;#{word}#&quot;</span>
+    <span class="k">length</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="n">new_word</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="k">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">new_word</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">sets</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="k">set</span><span class="p">(</span><span class="k">sets</span><span class="p">)</span>
+
+<span class="n">def</span> <span class="n">overlap</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span> <span class="n">word2</span><span class="p">,</span> <span class="n">max_token_len</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">set1</span> <span class="o">=</span> <span class="n">token</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span> <span class="n">max_token_len</span><span class="p">)</span>
+    <span class="n">set2</span> <span class="o">=</span> <span class="n">token</span><span class="p">(</span><span class="n">word2</span><span class="p">,</span> <span class="n">max_token_len</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">set1</span><span class="p">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">set2</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">overlap(&quot;dave&quot;, &quot;dav&quot;)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;#d&#39;, &#39;av&#39;, &#39;da&#39;}
+</code></pre></div>
+<h2 id="jaccard-measure">Jaccard Measure<a class="headerlink" href="#jaccard-measure" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Let Bx = set of tokens generated for string x</p>
+</li>
+<li>
+<p>Let By = set of tokens generated for string y</p>
+</li>
+<li>returns the number of common tokens</li>
+</ul>
+<p><span class="arithmatex">\(<span class="arithmatex">\(J(x, y) = |B_x \cap B_y | / |B_x \cup B_y |\)</span>\)</span>
+
+E.g., x = dave, y = dav, considering 2-grams</p>
+<p>Bx = {#d, da, av, ve, e#}, </p>
+<p>By = {#d, da, av, v#}</p>
+<p>J(x; y) = 3 / 6</p>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">jaccard</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span> <span class="n">word2</span><span class="p">,</span> <span class="n">max_token_len</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">set1</span> <span class="o">=</span> <span class="n">token</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span> <span class="n">max_token_len</span><span class="p">)</span>
+    <span class="n">set2</span> <span class="o">=</span> <span class="n">token</span><span class="p">(</span><span class="n">word2</span><span class="p">,</span> <span class="n">max_token_len</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Union: {set1.union(set2)}&quot;</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Intersection: {set1.intersection(set2)}&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">len</span><span class="p">(</span><span class="n">set1</span><span class="p">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">set2</span><span class="p">))</span> <span class="o">/</span> <span class="n">len</span><span class="p">(</span><span class="n">set1</span><span class="p">.</span><span class="k">union</span><span class="p">(</span><span class="n">set2</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">jaccard(&quot;dave&quot;, &quot;dav&quot;)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Union: {&#39;#d&#39;, &#39;e#&#39;, &#39;ve&#39;, &#39;da&#39;, &#39;v#&#39;, &#39;av&#39;}
+Intersection: {&#39;#d&#39;, &#39;da&#39;, &#39;av&#39;}
+
+
+
+
+
+0.5
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../Lecture4/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Lecture4
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../project/Group%20Project/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Group project
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../js/expand.js"></script>
+      
+    
+  </body>
+</html>

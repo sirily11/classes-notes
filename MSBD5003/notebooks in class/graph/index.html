@@ -1,0 +1,1965 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>Graph - Class Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#motif-finding" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Class Notes" class="md-header-nav__button md-logo" aria-label="Class Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Class Notes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Graph
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Class Notes" class="md-nav__button md-logo" aria-label="Class Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Class Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    <label class="md-nav__link" for="nav-1">
+      Msbd5001
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5001" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5001
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture%203/" class="md-nav__link">
+      Lecture 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture%209/" class="md-nav__link">
+      Lecture 9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/Lecture6/" class="md-nav__link">
+      Lecture6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-7" type="checkbox" id="nav-1-7" >
+    <label class="md-nav__link" for="nav-1-7">
+      Project
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Project" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-7">
+        <span class="md-nav__icon md-icon"></span>
+        Project
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/project/Group%20Project/" class="md-nav__link">
+      Group project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/project/Individual%20Project/" class="md-nav__link">
+      Individual project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5001/project/LSTM/" class="md-nav__link">
+      Lstm
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Msbd5006
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5006" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5006
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5006/Lecture%201/" class="md-nav__link">
+      Lecture 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5006/Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Msbd5008
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5008" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5008
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5008/Lecture2/" class="md-nav__link">
+      Lecture2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5008/Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5008/Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5008/Lecture5/" class="md-nav__link">
+      Lecture5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5008/Lectyre6/" class="md-nav__link">
+      Lectyre6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" >
+    <label class="md-nav__link" for="nav-3-6">
+      Homework
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Homework" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon"></span>
+        Homework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5008/homework/homework1/" class="md-nav__link">
+      Homework1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      Msbd5012
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5012" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5012
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
+    <label class="md-nav__link" for="nav-4-1">
+      Lectures
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Lectures" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        Lectures
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture%202/" class="md-nav__link">
+      Lecture 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5012/lectures/Lecture8/" class="md-nav__link">
+      Lecture8
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    <label class="md-nav__link" for="nav-5">
+      Msbd5003
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Msbd5003" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Msbd5003
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture1/" class="md-nav__link">
+      Lecture1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture2/" class="md-nav__link">
+      Lecture2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture3/" class="md-nav__link">
+      Lecture3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture4/" class="md-nav__link">
+      Lecture4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture5/" class="md-nav__link">
+      Lecture5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture6/" class="md-nav__link">
+      Lecture6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture7/" class="md-nav__link">
+      Lecture7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Lecture8/" class="md-nav__link">
+      Lecture8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9" >
+    <label class="md-nav__link" for="nav-5-9">
+      Homeworks
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Homeworks" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-9">
+        <span class="md-nav__icon md-icon"></span>
+        Homeworks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../homeworks/HW4/" class="md-nav__link">
+      Hw4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../homeworks/hw1/" class="md-nav__link">
+      Hw1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../homeworks/hw2/" class="md-nav__link">
+      Hw2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../homeworks/hw3/" class="md-nav__link">
+      Hw3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-10" type="checkbox" id="nav-5-10" checked>
+    <label class="md-nav__link" for="nav-5-10">
+      Notebooks in class
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Notebooks in class" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-10">
+        <span class="md-nav__icon md-icon"></span>
+        Notebooks in class
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DC/" class="md-nav__link">
+      Dc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PMI/" class="md-nav__link">
+      Pmi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Graph
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Graph
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motif-finding" class="md-nav__link">
+    Motif Finding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subgraphs" class="md-nav__link">
+    Subgraphs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfs" class="md-nav__link">
+    BFS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-ranking" class="md-nav__link">
+    List Ranking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-passing-via-aggregatemessages" class="md-nav__link">
+    Message passing via AggregateMessages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pregel-model-for-graph-computation" class="md-nav__link">
+    The Pregel Model for Graph Computation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../internal/" class="md-nav__link">
+      Internal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rdd/" class="md-nav__link">
+      Rdd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sparksql/" class="md-nav__link">
+      Sparksql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-11" type="checkbox" id="nav-5-11" >
+    <label class="md-nav__link" for="nav-5-11">
+      Projects
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Projects" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-11">
+        <span class="md-nav__icon md-icon"></span>
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projects/Project/" class="md-nav__link">
+      Project
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motif-finding" class="md-nav__link">
+    Motif Finding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subgraphs" class="md-nav__link">
+    Subgraphs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bfs" class="md-nav__link">
+    BFS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-ranking" class="md-nav__link">
+    List Ranking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-passing-via-aggregatemessages" class="md-nav__link">
+    Message passing via AggregateMessages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pregel-model-for-graph-computation" class="md-nav__link">
+    The Pregel Model for Graph Computation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Graph</h1>
+                
+                <div class="codehilite"><pre><span></span><code>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyspark</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Collecting pyspark
+[?25l  Downloading https://files.pythonhosted.org/packages/f0/26/198fc8c0b98580f617cb03cb298c6056587b8f0447e20fa40c5b634ced77/pyspark-3.0.1.tar.gz (204.2MB)
+[K     |████████████████████████████████| 204.2MB 38kB/s 
+[?25hCollecting py4j==0.10.9
+[?25l  Downloading https://files.pythonhosted.org/packages/9e/b6/6a4fb90cd235dc8e265a6a2067f2a2c99f0d91787f06aca4bcf7c23f3f80/py4j-0.10.9-py2.py3-none-any.whl (198kB)
+[K     |████████████████████████████████| 204kB 51.8MB/s 
+[?25hBuilding wheels for collected packages: pyspark
+  Building wheel for pyspark (setup.py) ... [?25l[?25hdone
+  Created wheel for pyspark: filename=pyspark-3.0.1-py2.py3-none-any.whl size=204612243 sha256=d4a7bf9d9286fd24237188aa6c7e6fce433cbe8062ab1b5448e6c06d960012fe
+  Stored in directory: /root/.cache/pip/wheels/5e/bd/07/031766ca628adec8435bb40f0bd83bb676ce65ff4007f8e73f
+Successfully built pyspark
+Installing collected packages: py4j, pyspark
+Successfully installed py4j-0.10.9 pyspark-3.0.1
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">graphframes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Collecting graphframes
+  Downloading https://files.pythonhosted.org/packages/0b/27/c7c7e1ced2fe9a905f865dd91faaec2ac8a8e313f511678c8ec92a41a153/graphframes-0.6-py2.py3-none-any.whl
+Requirement already satisfied: numpy in /usr/local/lib/python3.6/dist-packages (from graphframes) (1.18.5)
+Collecting nose
+[?25l  Downloading https://files.pythonhosted.org/packages/15/d8/dd071918c040f50fa1cf80da16423af51ff8ce4a0f2399b7bf8de45ac3d9/nose-1.3.7-py3-none-any.whl (154kB)
+[K     |████████████████████████████████| 163kB 15.3MB/s 
+[?25hInstalling collected packages: nose, graphframes
+Successfully installed graphframes-0.6 nose-1.3.7
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">spark</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">maven</span><span class="o">/</span><span class="n">graphframes</span><span class="o">/</span><span class="n">graphframes</span><span class="o">/</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">spark3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">s_2</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">graphframes</span><span class="o">-</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">spark3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">s_2</span><span class="o">.</span><span class="mf">12.</span><span class="n">jar</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>--2020-12-02 15:45:29--  https://dl.bintray.com/spark-packages/maven/graphframes/graphframes/0.8.0-spark3.0-s_2.12/graphframes-0.8.0-spark3.0-s_2.12.jar
+Resolving dl.bintray.com (dl.bintray.com)... 3.122.43.129, 35.157.127.85
+Connecting to dl.bintray.com (dl.bintray.com)|3.122.43.129|:443... connected.
+HTTP request sent, awaiting response... 302 
+Location: https://d29vzk4ow07wi7.cloudfront.net/b62d4bb1c4fdd74c9ce5aa4adee520a7a4375c2de73487381644e5220c67c1dd?response-content-disposition=attachment%3Bfilename%3D%22graphframes-0.8.0-spark3.0-s_2.12.jar%22&amp;Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHAqOi8vZDI5dnprNG93MDd3aTcuY2xvdWRmcm9udC5uZXQvYjYyZDRiYjFjNGZkZDc0YzljZTVhYTRhZGVlNTIwYTdhNDM3NWMyZGU3MzQ4NzM4MTY0NGU1MjIwYzY3YzFkZD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWF0dGFjaG1lbnQlM0JmaWxlbmFtZSUzRCUyMmdyYXBoZnJhbWVzLTAuOC4wLXNwYXJrMy4wLXNfMi4xMi5qYXIlMjIiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MDY5MjQ2NDl9LCJJcEFkZHJlc3MiOnsiQVdTOlNvdXJjZUlwIjoiMC4wLjAuMC8wIn19fV19&amp;Signature=dJQvqo-UV~oRF0t93Qw-YSGpDE1pvQCuS0t~kNdiC2cDsUoJ5CdWB-RinPlpEX5TY8-oIQBnpefd7ljNKnJ5t7L1ae4ZcIQLfqBdvJdMK7AcKzytxy3cc17j7Zc80hbTMYVkhThFSJS0Loz6fvPyedCqfjI8G66Mrp46VgSpTBCqHxF0bKusZuM4w82M9d-iLmYELnyDNPHTbLIAjlMh24CcxETAKmI~AN-pZPjaGz6YMc9rFuyROe8FE4p2B5jbmjzo5LB0AHNdJll~GXtqGFKPsdJavvoCVDqbAdyJxL3XtGZdMLwbSHO6WMhbJRetQc5mEgqSLPsrNXrCvD2Q-g__&amp;Key-Pair-Id=APKAIFKFWOMXM2UMTSFA [following]
+--2020-12-02 15:45:29--  https://d29vzk4ow07wi7.cloudfront.net/b62d4bb1c4fdd74c9ce5aa4adee520a7a4375c2de73487381644e5220c67c1dd?response-content-disposition=attachment%3Bfilename%3D%22graphframes-0.8.0-spark3.0-s_2.12.jar%22&amp;Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHAqOi8vZDI5dnprNG93MDd3aTcuY2xvdWRmcm9udC5uZXQvYjYyZDRiYjFjNGZkZDc0YzljZTVhYTRhZGVlNTIwYTdhNDM3NWMyZGU3MzQ4NzM4MTY0NGU1MjIwYzY3YzFkZD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWF0dGFjaG1lbnQlM0JmaWxlbmFtZSUzRCUyMmdyYXBoZnJhbWVzLTAuOC4wLXNwYXJrMy4wLXNfMi4xMi5qYXIlMjIiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MDY5MjQ2NDl9LCJJcEFkZHJlc3MiOnsiQVdTOlNvdXJjZUlwIjoiMC4wLjAuMC8wIn19fV19&amp;Signature=dJQvqo-UV~oRF0t93Qw-YSGpDE1pvQCuS0t~kNdiC2cDsUoJ5CdWB-RinPlpEX5TY8-oIQBnpefd7ljNKnJ5t7L1ae4ZcIQLfqBdvJdMK7AcKzytxy3cc17j7Zc80hbTMYVkhThFSJS0Loz6fvPyedCqfjI8G66Mrp46VgSpTBCqHxF0bKusZuM4w82M9d-iLmYELnyDNPHTbLIAjlMh24CcxETAKmI~AN-pZPjaGz6YMc9rFuyROe8FE4p2B5jbmjzo5LB0AHNdJll~GXtqGFKPsdJavvoCVDqbAdyJxL3XtGZdMLwbSHO6WMhbJRetQc5mEgqSLPsrNXrCvD2Q-g__&amp;Key-Pair-Id=APKAIFKFWOMXM2UMTSFA
+Resolving d29vzk4ow07wi7.cloudfront.net (d29vzk4ow07wi7.cloudfront.net)... 54.240.168.145, 54.240.168.82, 54.240.168.77, ...
+Connecting to d29vzk4ow07wi7.cloudfront.net (d29vzk4ow07wi7.cloudfront.net)|54.240.168.145|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 243265 (238K) [multipart/form-data]
+Saving to: ‘graphframes-0.8.0-spark3.0-s_2.12.jar’
+
+graphframes-0.8.0-s 100%[===================&gt;] 237.56K   563KB/s    in 0.4s
+
+2020-12-02 15:45:31 (563 KB/s) - ‘graphframes-0.8.0-spark3.0-s_2.12.jar’ saved [243265/243265]
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PYSPARK_SUBMIT_ARGS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;--packages graphframes:graphframes:0.8.1-spark3.0-s_2.12 pyspark-shell&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-15-4d1ba1edf8bb&gt; in &lt;module&gt;()
+----&gt; 1 os.environ[&#39;PYSPARK_SUBMIT_ARGS&#39;] = &#39;--packages graphframes:graphframes:0.8.1-spark3.0-s_2.12 pyspark-shell&#39;
+
+
+NameError: name &#39;os&#39; is not defined
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyspark.context</span> <span class="kn">import</span> <span class="n">SparkContext</span>
+<span class="kn">from</span> <span class="nn">pyspark.sql.session</span> <span class="kn">import</span> <span class="n">SparkSession</span>
+<span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="n">Row</span>
+
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">graphframes</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">sc</span><span class="o">.</span><span class="n">addPyFile</span><span class="p">(</span><span class="s2">&quot;https://dl.bintray.com/spark-packages/maven/graphframes/graphframes/0.8.0-spark3.0-s_2.12/graphframes-0.8.0-spark3.0-s_2.12.jar&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># Vertics DataFrame</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
+  <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">36</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="mi">37</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;David&quot;</span><span class="p">,</span> <span class="mi">29</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;Esther&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;Fanny&quot;</span><span class="p">,</span> <span class="mi">38</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;Gabby&quot;</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="p">],</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">])</span>
+
+<span class="c1"># Edges DataFrame</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
+  <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;friend&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;follow&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;follow&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;follow&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;follow&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;friend&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;friend&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;friend&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;follow&quot;</span><span class="p">)</span>
+<span class="p">],</span> <span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">,</span> <span class="s2">&quot;dst&quot;</span><span class="p">,</span> <span class="s2">&quot;relationship&quot;</span><span class="p">])</span>
+
+<span class="c1"># Create a GraphFrame</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">GraphFrame</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+<span class="n">g</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+Py4JJavaError                             Traceback (most recent call last)
+
+&lt;ipython-input-14-eccf3cb921e3&gt; in &lt;module&gt;()
+     24 
+     25 # Create a GraphFrame
+---&gt; 26 g = GraphFrame(v, e)
+     27 
+     28 g.vertices.show()
+
+
+/usr/local/lib/python3.6/dist-packages/graphframes/graphframe.py in __init__(self, v, e)
+     63         self._sqlContext = v.sql_ctx
+     64         self._sc = self._sqlContext._sc
+---&gt; 65         self._jvm_gf_api = _java_api(self._sc)
+     66 
+     67         self.ID = self._jvm_gf_api.ID()
+
+
+/usr/local/lib/python3.6/dist-packages/graphframes/graphframe.py in _java_api(jsc)
+     36 def _java_api(jsc):
+     37     javaClassName = &quot;org.graphframes.GraphFramePythonAPI&quot;
+---&gt; 38     return jsc._jvm.Thread.currentThread().getContextClassLoader().loadClass(javaClassName) \
+     39             .newInstance()
+     40
+
+
+/usr/local/lib/python3.6/dist-packages/py4j/java_gateway.py in __call__(self, *args)
+   1303         answer = self.gateway_client.send_command(command)
+   1304         return_value = get_return_value(
+-&gt; 1305             answer, self.gateway_client, self.target_id, self.name)
+   1306 
+   1307         for temp_arg in temp_args:
+
+
+/usr/local/lib/python3.6/dist-packages/pyspark/sql/utils.py in deco(*a, **kw)
+    126     def deco(*a, **kw):
+    127         try:
+--&gt; 128             return f(*a, **kw)
+    129         except py4j.protocol.Py4JJavaError as e:
+    130             converted = convert_exception(e.java_exception)
+
+
+/usr/local/lib/python3.6/dist-packages/py4j/protocol.py in get_return_value(answer, gateway_client, target_id, name)
+    326                 raise Py4JJavaError(
+    327                     &quot;An error occurred while calling {0}{1}{2}.\n&quot;.
+--&gt; 328                     format(target_id, &quot;.&quot;, name), value)
+    329             else:
+    330                 raise Py4JError(
+
+
+Py4JJavaError: An error occurred while calling o148.loadClass.
+: java.lang.ClassNotFoundException: org.graphframes.GraphFramePythonAPI
+    at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:471)
+    at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:589)
+    at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+    at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+    at py4j.Gateway.invoke(Gateway.java:282)
+    at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+    at py4j.commands.CallCommand.execute(CallCommand.java:79)
+    at py4j.GatewayConnection.run(GatewayConnection.java:238)
+    at java.base/java.lang.Thread.run(Thread.java:834)
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="mi">3</span><span class="c1"># g.vertices and g.edges are just DataFrames</span>
+<span class="c1"># You can use any DataFrame API on them</span>
+
+<span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;src = &#39;a&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+---+------------+
+|src|dst|relationship|
++---+---+------------+
+|  a|  b|      friend|
+|  a|  e|      friend|
++---+---+------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;src = &#39;a&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>2
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Count the number of followers of c.</span>
+<span class="c1"># This queries the edge DataFrame.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;relationship = &#39;follow&#39; and dst = &#39;c&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>2
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># A GraphFrame has additional attributes</span>
+
+<span class="n">g</span><span class="o">.</span><span class="n">outDegrees</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+---------+
+| id|outDegree|
++---+---------+
+|  g|        1|
+|  f|        1|
+|  e|        2|
+|  d|        1|
+|  c|        1|
+|  b|        1|
+|  a|        2|
++---+---------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">g</span><span class="o">.</span><span class="n">inDegrees</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+--------+
+| id|inDegree|
++---+--------+
+|  f|       1|
+|  e|       2|
+|  d|       1|
+|  c|       2|
+|  b|       2|
+|  a|       1|
++---+--------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">g</span><span class="o">.</span><span class="n">inDegrees</span><span class="o">.</span><span class="n">explain</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>== Physical Plan ==
+*(2) HashAggregate(keys=[dst#45], functions=[count(1)])
++- Exchange hashpartitioning(dst#45, 200), true, [id=#171]
+   +- *(1) HashAggregate(keys=[dst#45], functions=[partial_count(1)])
+      +- *(1) Project [dst#45]
+         +- *(1) Scan ExistingRDD[src#44,dst#45,relationship#46]
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">myInDegrees</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s1">&#39;dst&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>\
+               <span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s1">&#39;dst&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;inDegree&#39;</span><span class="p">)</span>
+<span class="n">myInDegrees</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+--------+
+| id|inDegree|
++---+--------+
+|  f|       1|
+|  e|       2|
+|  d|       1|
+|  c|       2|
+|  b|       2|
+|  a|       1|
++---+--------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">myInDegrees</span><span class="o">.</span><span class="n">explain</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>== Physical Plan ==
+*(2) HashAggregate(keys=[dst#45], functions=[count(1)])
++- Exchange hashpartitioning(dst#45, 200), true, [id=#218]
+   +- *(1) HashAggregate(keys=[dst#45], functions=[partial_count(1)])
+      +- *(1) Project [dst#45]
+         +- *(1) Scan ExistingRDD[src#44,dst#45,relationship#46]
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">inDegrees</span><span class="o">.</span><span class="n">storageLevel</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Serialized 1x Replicated
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">g</span><span class="o">.</span><span class="n">inDegrees</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>DataFrame[id: string, inDegree: int]
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">inDegrees</span><span class="o">.</span><span class="n">storageLevel</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Disk Memory Deserialized 1x Replicated
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">storageLevel</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Serialized 1x Replicated
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">g</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>GraphFrame(v:[id: string, name: string ... 1 more field], e:[src: string, dst: string ... 1 more field])
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">storageLevel</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">storageLevel</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Disk Memory Deserialized 1x Replicated
+Disk Memory Deserialized 1x Replicated
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># A triplet view of the graph</span>
+
+<span class="n">g</span><span class="o">.</span><span class="n">triplets</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+----------------+--------------+----------------+
+|             src|          edge|             dst|
++----------------+--------------+----------------+
+| [e, Esther, 32]|[e, f, follow]|  [f, Fanny, 38]|
+|  [g, Gabby, 60]|[g, e, follow]| [e, Esther, 32]|
+|  [a, Alice, 34]|[a, e, friend]| [e, Esther, 32]|
+| [e, Esther, 32]|[e, d, friend]|  [d, David, 29]|
+|  [f, Fanny, 38]|[f, c, follow]|[c, Charlie, 37]|
+|    [b, Bob, 36]|[b, c, follow]|[c, Charlie, 37]|
+|[c, Charlie, 37]|[c, b, follow]|    [b, Bob, 36]|
+|  [a, Alice, 34]|[a, b, friend]|    [b, Bob, 36]|
+|  [d, David, 29]|[d, a, friend]|  [a, Alice, 34]|
++----------------+--------------+----------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">g</span><span class="o">.</span><span class="n">triplets</span><span class="o">.</span><span class="n">explain</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>== Physical Plan ==
+*(9) Project [src#217, edge#215, dst#219]
++- *(9) SortMergeJoin [edge#215.dst], [dst#219.id], Inner
+   :- *(6) Sort [edge#215.dst ASC NULLS FIRST], false, 0
+   :  +- Exchange hashpartitioning(edge#215.dst, 200), true, [id=#312]
+   :     +- *(5) SortMergeJoin [edge#215.src], [src#217.id], Inner
+   :        :- *(2) Sort [edge#215.src ASC NULLS FIRST], false, 0
+   :        :  +- Exchange hashpartitioning(edge#215.src, 200), true, [id=#297]
+   :        :     +- *(1) Project [struct(src, src#44, dst, dst#45, relationship, relationship#46) AS edge#215]
+   :        :        +- InMemoryTableScan [dst#45, relationship#46, src#44]
+   :        :              +- InMemoryRelation [src#44, dst#45, relationship#46], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :        :                    +- *(1) Scan ExistingRDD[src#44,dst#45,relationship#46]
+   :        +- *(4) Sort [src#217.id ASC NULLS FIRST], false, 0
+   :           +- Exchange hashpartitioning(src#217.id, 200), true, [id=#305]
+   :              +- *(3) Project [struct(id, id#38, name, name#39, age, age#40L) AS src#217]
+   :                 +- InMemoryTableScan [age#40L, id#38, name#39]
+   :                       +- InMemoryRelation [id#38, name#39, age#40L], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :                             +- *(1) Scan ExistingRDD[id#38,name#39,age#40L]
+   +- *(8) Sort [dst#219.id ASC NULLS FIRST], false, 0
+      +- Exchange hashpartitioning(dst#219.id, 200), true, [id=#320]
+         +- *(7) Project [struct(id, id#38, name, name#39, age, age#40L) AS dst#219]
+            +- InMemoryTableScan [age#40L, id#38, name#39]
+                  +- InMemoryRelation [id#38, name#39, age#40L], StorageLevel(disk, memory, deserialized, 1 replicas)
+                        +- *(1) Scan ExistingRDD[id#38,name#39,age#40L]
+</code></pre></div>
+<h3 id="motif-finding">Motif Finding<a class="headerlink" href="#motif-finding" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Search for pairs of vertices with edges in both directions between them.</span>
+<span class="n">motifs</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(a)-[]-&gt;(b); (b)-[]-&gt;(a)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s1">&#39;a.id &lt; b.id&#39;</span><span class="p">)</span>
+<span class="n">motifs</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+------------+----------------+
+|           a|               b|
++------------+----------------+
+|[b, Bob, 36]|[c, Charlie, 37]|
++------------+----------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Find triangles</span>
+
+<span class="n">triangles</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(a)-[]-&gt;(b); (b)-[]-&gt;(c); (c)-[]-&gt;(a)&quot;</span><span class="p">)</span>
+<span class="n">triangles</span> <span class="o">=</span> <span class="n">triangles</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;a.id &lt; b.id AND a.id &lt; c.id&quot;</span><span class="p">)</span>
+<span class="n">triangles</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+--------------+---------------+--------------+
+|             a|              b|             c|
++--------------+---------------+--------------+
+|[a, Alice, 34]|[e, Esther, 32]|[d, David, 29]|
++--------------+---------------+--------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">triangles</span><span class="o">.</span><span class="n">explain</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>== Physical Plan ==
+*(6) Project [a#630, b#632, c#657]
++- *(6) BroadcastHashJoin [c#657.id, a#630.id], [__tmp-6526019406657860729#687.src, __tmp-6526019406657860729#687.dst], Inner, BuildRight
+   :- *(6) Project [a#630, b#632, c#657]
+   :  +- *(6) BroadcastHashJoin [__tmp-430217833014886237#655.dst], [c#657.id], Inner, BuildRight, (a#630.id &lt; c#657.id)
+   :     :- *(6) BroadcastHashJoin [b#632.id], [__tmp-430217833014886237#655.src], Inner, BuildRight
+   :     :  :- *(6) Project [a#630, b#632]
+   :     :  :  +- *(6) BroadcastHashJoin [__tmp-1043886091038848698#628.dst], [b#632.id], Inner, BuildRight, (a#630.id &lt; b#632.id)
+   :     :  :     :- *(6) BroadcastHashJoin [__tmp-1043886091038848698#628.src], [a#630.id], Inner, BuildRight
+   :     :  :     :  :- *(6) Project [struct(src, src#44, dst, dst#45, relationship, relationship#46) AS __tmp-1043886091038848698#628]
+   :     :  :     :  :  +- InMemoryTableScan [dst#45, relationship#46, src#44]
+   :     :  :     :  :        +- InMemoryRelation [src#44, dst#45, relationship#46], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :     :  :     :  :              +- *(1) Scan ExistingRDD[src#44,dst#45,relationship#46]
+   :     :  :     :  +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, struct&lt;id:string,name:string,age:bigint&gt;, false].id)), [id=#628]
+   :     :  :     :     +- *(1) Project [struct(id, id#38, name, name#39, age, age#40L) AS a#630]
+   :     :  :     :        +- InMemoryTableScan [age#40L, id#38, name#39]
+   :     :  :     :              +- InMemoryRelation [id#38, name#39, age#40L], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :     :  :     :                    +- *(1) Scan ExistingRDD[id#38,name#39,age#40L]
+   :     :  :     +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, struct&lt;id:string,name:string,age:bigint&gt;, false].id)), [id=#634]
+   :     :  :        +- *(2) Project [struct(id, id#38, name, name#39, age, age#40L) AS b#632]
+   :     :  :           +- InMemoryTableScan [age#40L, id#38, name#39]
+   :     :  :                 +- InMemoryRelation [id#38, name#39, age#40L], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :     :  :                       +- *(1) Scan ExistingRDD[id#38,name#39,age#40L]
+   :     :  +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, struct&lt;src:string,dst:string,relationship:string&gt;, false].src)), [id=#641]
+   :     :     +- *(3) Project [struct(src, src#44, dst, dst#45, relationship, relationship#46) AS __tmp-430217833014886237#655]
+   :     :        +- InMemoryTableScan [dst#45, relationship#46, src#44]
+   :     :              +- InMemoryRelation [src#44, dst#45, relationship#46], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :     :                    +- *(1) Scan ExistingRDD[src#44,dst#45,relationship#46]
+   :     +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, struct&lt;id:string,name:string,age:bigint&gt;, false].id)), [id=#647]
+   :        +- *(4) Project [struct(id, id#38, name, name#39, age, age#40L) AS c#657]
+   :           +- InMemoryTableScan [age#40L, id#38, name#39]
+   :                 +- InMemoryRelation [id#38, name#39, age#40L], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :                       +- *(1) Scan ExistingRDD[id#38,name#39,age#40L]
+   +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, struct&lt;src:string,dst:string,relationship:string&gt;, false].src, input[0, struct&lt;src:string,dst:string,relationship:string&gt;, false].dst)), [id=#654]
+      +- *(5) Project [struct(src, src#44, dst, dst#45, relationship, relationship#46) AS __tmp-6526019406657860729#687]
+         +- InMemoryTableScan [dst#45, relationship#46, src#44]
+               +- InMemoryRelation [src#44, dst#45, relationship#46], StorageLevel(disk, memory, deserialized, 1 replicas)
+                     +- *(1) Scan ExistingRDD[src#44,dst#45,relationship#46]
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Negation</span>
+<span class="n">oneway</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(a)-[]-&gt;(b); !(b)-[]-&gt;(a)&quot;</span><span class="p">)</span>
+<span class="n">oneway</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---------------+----------------+
+|              a|               b|
++---------------+----------------+
+| [a, Alice, 34]| [e, Esther, 32]|
+|[e, Esther, 32]|  [d, David, 29]|
+| [a, Alice, 34]|    [b, Bob, 36]|
+| [g, Gabby, 60]| [e, Esther, 32]|
+|[e, Esther, 32]|  [f, Fanny, 38]|
+| [f, Fanny, 38]|[c, Charlie, 37]|
+| [d, David, 29]|  [a, Alice, 34]|
++---------------+----------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Find vertices without incoming edges:</span>
+<span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;!()-[]-&gt;(a)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+--------------+
+|             a|
++--------------+
+|[g, Gabby, 60]|
++--------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># More meaningful queries can be expressed by applying filters.</span>
+<span class="c1"># Question: where is this filter applied?</span>
+
+<span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(a)-[e]-&gt;(b); (b)-[]-&gt;(a)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;b.age &gt; 36&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+------------+--------------+----------------+
+|           a|             e|               b|
++------------+--------------+----------------+
+|[b, Bob, 36]|[b, c, follow]|[c, Charlie, 37]|
++------------+--------------+----------------+
+
++------------+
+|relationship|
++------------+
+|      follow|
++------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(a)-[]-&gt;(b); (b)-[]-&gt;(a)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;b.age &gt; 36&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">explain</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>== Physical Plan ==
+*(4) Project [a#2584, b#2586]
++- *(4) BroadcastHashJoin [b#2586.id, a#2584.id], [__tmp2506060614762666678#2609.src, __tmp2506060614762666678#2609.dst], Inner, BuildRight
+   :- *(4) Project [a#2584, b#2586]
+   :  +- *(4) BroadcastHashJoin [__tmp-3851898762290097694#2582.dst], [b#2586.id], Inner, BuildRight
+   :     :- *(4) BroadcastHashJoin [__tmp-3851898762290097694#2582.src], [a#2584.id], Inner, BuildRight
+   :     :  :- *(4) Project [struct(src, src#44, dst, dst#45, relationship, relationship#46) AS __tmp-3851898762290097694#2582]
+   :     :  :  +- InMemoryTableScan [dst#45, relationship#46, src#44]
+   :     :  :        +- InMemoryRelation [src#44, dst#45, relationship#46], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :     :  :              +- *(1) Scan ExistingRDD[src#44,dst#45,relationship#46]
+   :     :  +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, struct&lt;id:string,name:string,age:bigint&gt;, false].id)), [id=#1356]
+   :     :     +- *(1) Project [struct(id, id#38, name, name#39, age, age#40L) AS a#2584]
+   :     :        +- InMemoryTableScan [age#40L, id#38, name#39]
+   :     :              +- InMemoryRelation [id#38, name#39, age#40L], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :     :                    +- *(1) Scan ExistingRDD[id#38,name#39,age#40L]
+   :     +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, struct&lt;id:string,name:string,age:bigint&gt;, false].id)), [id=#1363]
+   :        +- *(2) Project [struct(id, id#38, name, name#39, age, age#40L) AS b#2586]
+   :           +- *(2) Filter (isnotnull(age#40L) AND (age#40L &gt; 36))
+   :              +- InMemoryTableScan [age#40L, id#38, name#39], [isnotnull(age#40L), (age#40L &gt; 36)]
+   :                    +- InMemoryRelation [id#38, name#39, age#40L], StorageLevel(disk, memory, deserialized, 1 replicas)
+   :                          +- *(1) Scan ExistingRDD[id#38,name#39,age#40L]
+   +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, struct&lt;src:string,dst:string,relationship:string&gt;, false].src, input[0, struct&lt;src:string,dst:string,relationship:string&gt;, false].dst)), [id=#1370]
+      +- *(3) Project [struct(src, src#44, dst, dst#45, relationship, relationship#46) AS __tmp2506060614762666678#2609]
+         +- InMemoryTableScan [dst#45, relationship#46, src#44]
+               +- InMemoryRelation [src#44, dst#45, relationship#46], StorageLevel(disk, memory, deserialized, 1 replicas)
+                     +- *(1) Scan ExistingRDD[src#44,dst#45,relationship#46]
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Find chains of 4 vertices such that at least 2 of the 3 edges are &quot;friend&quot; relationships.</span>
+<span class="c1"># The when function is similar to the CASE WHEN in SQL</span>
+
+<span class="n">chain4</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(a)-[e1]-&gt;(b); (b)-[e2]-&gt;(c); (c)-[e3]-&gt;(d)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;a!=d AND a!=c AND b!=d&#39;</span><span class="p">)</span>
+
+<span class="n">friendTo1</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="n">when</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s1">&#39;relationship&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;friend&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">chain4</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="n">friendTo1</span><span class="p">(</span><span class="n">chain4</span><span class="p">[</span><span class="s1">&#39;e1&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;f1&#39;</span><span class="p">),</span> \
+                  <span class="n">friendTo1</span><span class="p">(</span><span class="n">chain4</span><span class="p">[</span><span class="s1">&#39;e2&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">),</span> \
+                  <span class="n">friendTo1</span><span class="p">(</span><span class="n">chain4</span><span class="p">[</span><span class="s1">&#39;e3&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;f3&#39;</span><span class="p">))</span> \
+      <span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;f1 + f2 + f3 &gt;= 2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---------------+--------------+---------------+--------------+---------------+--------------+----------------+---+---+---+
+|              a|            e1|              b|            e2|              c|            e3|               d| f1| f2| f3|
++---------------+--------------+---------------+--------------+---------------+--------------+----------------+---+---+---+
+| [d, David, 29]|[d, a, friend]| [a, Alice, 34]|[a, e, friend]|[e, Esther, 32]|[e, f, follow]|  [f, Fanny, 38]|  1|  1|  0|
+| [d, David, 29]|[d, a, friend]| [a, Alice, 34]|[a, b, friend]|   [b, Bob, 36]|[b, c, follow]|[c, Charlie, 37]|  1|  1|  0|
+|[e, Esther, 32]|[e, d, friend]| [d, David, 29]|[d, a, friend]| [a, Alice, 34]|[a, b, friend]|    [b, Bob, 36]|  1|  1|  1|
+| [g, Gabby, 60]|[g, e, follow]|[e, Esther, 32]|[e, d, friend]| [d, David, 29]|[d, a, friend]|  [a, Alice, 34]|  0|  1|  1|
++---------------+--------------+---------------+--------------+---------------+--------------+----------------+---+---+---+
+</code></pre></div>
+<h3 id="subgraphs">Subgraphs<a class="headerlink" href="#subgraphs" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Select subgraph of users older than 30, and relationships of type &quot;friend&quot;.</span>
+<span class="c1"># Drop isolated vertices (users) which are not contained in any edges (relationships).</span>
+
+<span class="n">g1</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">filterVertices</span><span class="p">(</span><span class="s2">&quot;age &gt; 30&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filterEdges</span><span class="p">(</span><span class="s2">&quot;relationship = &#39;friend&#39;&quot;</span><span class="p">)</span>\
+      <span class="o">.</span><span class="n">dropIsolatedVertices</span><span class="p">()</span>
+
+<span class="n">g1</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">g1</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+------+---+
+| id|  name|age|
++---+------+---+
+|  e|Esther| 32|
+|  b|   Bob| 36|
+|  a| Alice| 34|
++---+------+---+
+
++---+---+------------+
+|src|dst|relationship|
++---+---+------------+
+|  a|  e|      friend|
+|  a|  b|      friend|
++---+---+------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Select subgraph based on edges &quot;e&quot; of type &quot;follow&quot;</span>
+<span class="c1"># pointing from a younger user &quot;a&quot; to an older user &quot;b&quot;.</span>
+
+<span class="n">paths</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;(a)-[e]-&gt;(b)&quot;</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;e.relationship = &#39;follow&#39;&quot;</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;a.age &lt; b.age&quot;</span><span class="p">)</span>
+
+<span class="c1"># &quot;paths&quot; contains vertex info. Extract the edges.</span>
+
+<span class="n">e2</span> <span class="o">=</span> <span class="n">paths</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;e.*&quot;</span><span class="p">)</span>
+
+<span class="c1"># Construct the subgraph</span>
+<span class="n">g2</span> <span class="o">=</span> <span class="n">GraphFrame</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">e2</span><span class="p">)</span><span class="o">.</span><span class="n">dropIsolatedVertices</span><span class="p">()</span>
+
+<span class="n">g2</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">g2</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+-------+---+
+| id|   name|age|
++---+-------+---+
+|  f|  Fanny| 38|
+|  e| Esther| 32|
+|  c|Charlie| 37|
+|  b|    Bob| 36|
++---+-------+---+
+
++---+---+------------+
+|src|dst|relationship|
++---+---+------------+
+|  e|  f|      follow|
+|  b|  c|      follow|
++---+---+------------+
+</code></pre></div>
+<h3 id="bfs">BFS<a class="headerlink" href="#bfs" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Starting vertex is &#39;a&#39;</span>
+<span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s2">&quot;id = &#39;a&#39;&quot;</span><span class="p">)]</span>
+<span class="n">visited</span> <span class="o">=</span>  <span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">while</span> <span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1"># From the current layer, get all the one-hop neighbors</span>
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="p">,</span> <span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">])</span>
+    <span class="c1"># Rename the column as &#39;id&#39;, and remove visited verices and duplicates</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">d1</span><span class="p">[</span><span class="s1">&#39;dst&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">))</span> \
+           <span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">visited</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+    <span class="n">layers</span> <span class="o">+=</span> <span class="p">[</span><span class="n">d2</span><span class="p">]</span>
+    <span class="n">visited</span> <span class="o">=</span> <span class="n">visited</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+
+| id|
++---+
+|  a|
++---+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">layers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+
+| id|
++---+
+|  e|
+|  b|
++---+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">layers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+
+| id|
++---+
+|  f|
+|  d|
+|  c|
++---+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">layers</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+
+| id|
++---+
++---+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># GraphFrames provides own BFS:</span>
+
+<span class="n">paths</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">bfs</span><span class="p">(</span><span class="s2">&quot;id = &#39;a&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;age &gt; 36&quot;</span><span class="p">)</span>
+<span class="n">paths</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+--------------+--------------+---------------+--------------+----------------+
+|          from|            e0|             v1|            e1|              to|
++--------------+--------------+---------------+--------------+----------------+
+|[a, Alice, 34]|[a, b, friend]|   [b, Bob, 36]|[b, c, follow]|[c, Charlie, 37]|
+|[a, Alice, 34]|[a, e, friend]|[e, Esther, 32]|[e, f, follow]|  [f, Fanny, 38]|
++--------------+--------------+---------------+--------------+----------------+
+</code></pre></div>
+<h3 id="list-ranking">List Ranking<a class="headerlink" href="#list-ranking" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># -1 denotes end of list</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="s1">&#39;dst&#39;</span><span class="p">])</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">),</span> <span class="n">when</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">dst</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">))</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="n">v</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">e</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+---+
+| id|  d|
++---+---+
+|  0|  1|
+|  1|  1|
+|  3|  1|
+|  4|  1|
+|  5|  0|
+|  6|  1|
+| -1|  0|
++---+---+
+
++---+---+
+|src|dst|
++---+---+
+|  0|  5|
+|  1|  0|
+|  3|  4|
+|  4|  6|
+|  5| -1|
+|  6|  1|
++---+---+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="k">while</span> <span class="n">e</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s1">&#39;dst != -1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">GraphFrame</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">triplets</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;src.id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">),</span> 
+                          <span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;src.d&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">col</span><span class="p">(</span><span class="s1">&#39;dst.d&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">))</span> \
+         <span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;(a)-[]-&gt;(b); (b)-[]-&gt;(c)&#39;</span><span class="p">)</span> \
+         <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;a.id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">),</span> <span class="n">col</span><span class="p">(</span><span class="s1">&#39;c.id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;dst&#39;</span><span class="p">))</span> \
+         <span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s1">&#39;dst = -1&#39;</span><span class="p">))</span>
+<span class="n">v</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+---+
+| id|  d|
++---+---+
+|  0|  1|
+|  1|  2|
+|  3|  5|
+|  4|  4|
+|  5|  0|
+|  6|  3|
+| -1|  0|
++---+---+
+</code></pre></div>
+<h3 id="message-passing-via-aggregatemessages">Message passing via AggregateMessages<a class="headerlink" href="#message-passing-via-aggregatemessages" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">coalesce</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">lit</span><span class="p">,</span> <span class="nb">sum</span><span class="p">,</span> <span class="n">when</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span>
+<span class="kn">from</span> <span class="nn">graphframes.lib</span> <span class="kn">import</span> <span class="n">AggregateMessages</span> <span class="k">as</span> <span class="n">AM</span>
+
+<span class="c1"># AggregateMessages has the following members: src, dst, edge, msg</span>
+<span class="c1"># For each user, sum the ages of the adjacent users.</span>
+<span class="n">agg</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">aggregateMessages</span><span class="p">(</span>
+    <span class="nb">sum</span><span class="p">(</span><span class="n">AM</span><span class="o">.</span><span class="n">msg</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;summedAges&quot;</span><span class="p">),</span>
+    <span class="n">sendToSrc</span> <span class="o">=</span> <span class="n">AM</span><span class="o">.</span><span class="n">dst</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span>
+    <span class="n">sendToDst</span> <span class="o">=</span> <span class="n">AM</span><span class="o">.</span><span class="n">src</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span>
+<span class="n">agg</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+----------+
+| id|summedAges|
++---+----------+
+|  g|        32|
+|  f|        69|
+|  e|       161|
+|  d|        66|
+|  c|       110|
+|  b|       108|
+|  a|        97|
++---+----------+
+</code></pre></div>
+<h3 id="the-pregel-model-for-graph-computation">The Pregel Model for Graph Computation<a class="headerlink" href="#the-pregel-model-for-graph-computation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Pagerank in the Pregel model </span>
+
+<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">coalesce</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">lit</span><span class="p">,</span> <span class="nb">sum</span><span class="p">,</span> <span class="n">when</span><span class="p">,</span> <span class="nb">min</span>
+<span class="kn">from</span> <span class="nn">graphframes.lib</span> <span class="kn">import</span> <span class="n">Pregel</span>
+
+<span class="c1"># Need to set up a directory for Pregel computation</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">setCheckpointDir</span><span class="p">(</span><span class="s2">&quot;checkpoint&quot;</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Use builder pattern to describe the operations.</span>
+<span class="sd">Call run() to start a run. It returns a DataFrame of vertices from the last iteration.</span>
+
+<span class="sd">When a run starts, it expands the vertices DataFrame using column expressions </span>
+<span class="sd">defined by withVertexColumn(). Those additional vertex properties can be </span>
+<span class="sd">changed during Pregel iterations. In each Pregel iteration, there are three </span>
+<span class="sd">phases:</span>
+
+<span class="sd">* Given each edge triplet, generate messages and specify target vertices to </span>
+<span class="sd">  send, described by sendMsgToDst() and sendMsgToSrc().</span>
+<span class="sd">* Aggregate messages by target vertex IDs, described by aggMsgs().</span>
+<span class="sd">* Update additional vertex properties based on aggregated messages and states </span>
+<span class="sd">  from previous iteration, described by withVertexColumn().</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">outDegrees</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">GraphFrame</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">ranks</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">pregel</span> \
+        <span class="o">.</span><span class="n">setMaxIter</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> \
+        <span class="o">.</span><span class="n">sendMsgToDst</span><span class="p">(</span><span class="n">Pregel</span><span class="o">.</span><span class="n">src</span><span class="p">(</span><span class="s2">&quot;rank&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">Pregel</span><span class="o">.</span><span class="n">src</span><span class="p">(</span><span class="s2">&quot;outDegree&quot;</span><span class="p">))</span> \
+        <span class="o">.</span><span class="n">aggMsgs</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">Pregel</span><span class="o">.</span><span class="n">msg</span><span class="p">()))</span> \
+        <span class="o">.</span><span class="n">withVertexColumn</span><span class="p">(</span><span class="s2">&quot;rank&quot;</span><span class="p">,</span> <span class="n">lit</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> \
+            <span class="n">coalesce</span><span class="p">(</span><span class="n">Pregel</span><span class="o">.</span><span class="n">msg</span><span class="p">(),</span> <span class="n">lit</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span> <span class="o">*</span> <span class="n">lit</span><span class="p">(</span><span class="mf">0.85</span><span class="p">)</span> <span class="o">+</span> <span class="n">lit</span><span class="p">(</span><span class="mf">0.15</span><span class="p">))</span> \
+        <span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">ranks</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># pyspark.sql.functions.coalesce(*cols): Returns the first column that is not null.</span>
+<span class="c1"># Not to be confused with spark.sql.coalesce(numPartitions)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+---------+-------------------+
+| id|outDegree|               rank|
++---+---------+-------------------+
+|  g|        1|               0.15|
+|  f|        1|0.41104330078124995|
+|  e|        2| 0.5032932031249999|
+|  d|        1|0.41104330078124995|
+|  c|        1|  2.780783203124999|
+|  b|        1| 2.2680220312499997|
+|  a|        2|    0.4758149609375|
++---+---------+-------------------+
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># BFS in the Pregel model</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">GraphFrame</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+
+<span class="n">dist</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">pregel</span> \
+        <span class="o">.</span><span class="n">sendMsgToDst</span><span class="p">(</span><span class="n">when</span><span class="p">(</span><span class="n">Pregel</span><span class="o">.</span><span class="n">src</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">),</span> <span class="n">Pregel</span><span class="o">.</span><span class="n">src</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> \
+        <span class="o">.</span><span class="n">aggMsgs</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">Pregel</span><span class="o">.</span><span class="n">msg</span><span class="p">()))</span> \
+        <span class="o">.</span><span class="n">withVertexColumn</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">when</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="mi">99999</span><span class="p">),</span> \
+            <span class="n">when</span><span class="p">(</span><span class="n">Pregel</span><span class="o">.</span><span class="n">msg</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">col</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">),</span> <span class="n">Pregel</span><span class="o">.</span><span class="n">msg</span><span class="p">())</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)))</span> \
+        <span class="o">.</span><span class="n">withVertexColumn</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">,</span> <span class="n">when</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="kc">False</span><span class="p">),</span> \
+            <span class="n">when</span><span class="p">(</span><span class="n">Pregel</span><span class="o">.</span><span class="n">msg</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">col</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span> \
+        <span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">dist</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>+---+---------+-----+------+
+| id|outDegree|    d|active|
++---+---------+-----+------+
+|  g|        1|99999| false|
+|  f|        1|    2| false|
+|  e|        2|    1| false|
+|  d|        1|    2| false|
+|  c|        1|    2| false|
+|  b|        1|    1| false|
+|  a|        2|    0| false|
++---+---------+-----+------+
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../PMI/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Pmi
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../internal/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Internal
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ['instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../js/expand.js"></script>
+      
+    
+  </body>
+</html>

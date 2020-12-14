@@ -10,15 +10,15 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
-        <title>Lecture4 - Class Notes</title>
+        <title>Big data and hdfs - Class Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6910b76c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19753c6b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sql" class="md-skip">
+        <a href="#big-data-definition" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Lecture4
+              Big data and hdfs
             
           </span>
         </div>
@@ -475,32 +475,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Lecture1/" class="md-nav__link">
-      Lecture1
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Lecture2/" class="md-nav__link">
-      Lecture2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Lecture3/" class="md-nav__link">
-      Lecture3
+    <a href="../Azure%20Cloud/" class="md-nav__link">
+      Azure cloud
     </a>
   </li>
 
@@ -520,12 +496,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Lecture4
+        Big data and hdfs
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Lecture4
+      Big data and hdfs
     </a>
     
       
@@ -542,37 +518,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#join" class="md-nav__link">
-    join
+  <a href="#3-vs" class="md-nav__link">
+    3 vs
   </a>
   
-    <nav class="md-nav" aria-label="join">
+    <nav class="md-nav" aria-label="3 vs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#first-way" class="md-nav__link">
-    First way
+  <a href="#volume" class="md-nav__link">
+    Volume
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#second-way" class="md-nav__link">
-    Second way
+  <a href="#velocity-streaming-data" class="md-nav__link">
+    Velocity ( Streaming data )
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#outter-join" class="md-nav__link">
-    Outter join
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inner-join" class="md-nav__link">
-    Inner join
+  <a href="#variety" class="md-nav__link">
+    Variety
   </a>
   
 </li>
@@ -595,20 +564,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Lecture5/" class="md-nav__link">
-      Lecture5
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Lecture6/" class="md-nav__link">
-      Lecture6
+    <a href="../Lecture3/" class="md-nav__link">
+      Lecture3
     </a>
   </li>
 
@@ -633,6 +590,42 @@
   <li class="md-nav__item">
     <a href="../Lecture8/" class="md-nav__link">
       Lecture8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MLib/" class="md-nav__link">
+      Mlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Spark%20SQL/" class="md-nav__link">
+      Spark sql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Spark%20basics%20and%20RDD/" class="md-nav__link">
+      Spark basics and rdd
     </a>
   </li>
 
@@ -774,6 +767,18 @@
   <li class="md-nav__item">
     <a href="../notebooks%20in%20class/internal/" class="md-nav__link">
       Internal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../notebooks%20in%20class/mllib/" class="md-nav__link">
+      Mllib
     </a>
   </li>
 
@@ -986,18 +991,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5012/lectures/Lecture8/" class="md-nav__link">
-      Lecture8
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1032,37 +1025,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#join" class="md-nav__link">
-    join
+  <a href="#3-vs" class="md-nav__link">
+    3 vs
   </a>
   
-    <nav class="md-nav" aria-label="join">
+    <nav class="md-nav" aria-label="3 vs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#first-way" class="md-nav__link">
-    First way
+  <a href="#volume" class="md-nav__link">
+    Volume
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#second-way" class="md-nav__link">
-    Second way
+  <a href="#velocity-streaming-data" class="md-nav__link">
+    Velocity ( Streaming data )
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#outter-join" class="md-nav__link">
-    Outter join
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inner-join" class="md-nav__link">
-    Inner join
+  <a href="#variety" class="md-nav__link">
+    Variety
   </a>
   
 </li>
@@ -1085,95 +1071,280 @@
               
                 
                 
-                <h1 id="sql">SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h1>
+                <h1 id="big-data-definition">Big Data Definition<a class="headerlink" href="#big-data-definition" title="Permanent link">&para;</a></h1>
+<p>Big Data is data whose scale, complexity, and speed require new architecture, techniques, algorithms, and analytics to manage it and extract value and hidden knowledge from it.</p>
 <ul>
-<li>A tuple = a record = row</li>
-<li>A table = a set of tuples</li>
+<li>
+<p>Old model: Few companies are generating data, all others are consuming data</p>
+</li>
+<li>
+<p>New model: all of us are generating and consuming data at the same time</p>
+<ul>
+<li>Socail media</li>
+<li>Scientific instruments</li>
+<li>Mobile devices</li>
+<li>Sensors</li>
 </ul>
-<h2 id="join">join<a class="headerlink" href="#join" title="Permanent link">&para;</a></h2>
-<p>support we have a table with following schema</p>
-<div class="codehilite"><pre><span></span><code><span class="k">drop</span> <span class="k">table</span> <span class="k">if</span> <span class="k">exists</span> <span class="n">product</span><span class="p">,</span> <span class="k">location</span><span class="p">;</span>
-
-<span class="k">create</span> <span class="k">table</span> <span class="k">location</span><span class="p">(</span>
-    <span class="n">id</span> <span class="nb">int</span> <span class="k">primary</span> <span class="k">key</span> <span class="n">auto_increment</span><span class="p">,</span>
-    <span class="k">location</span> <span class="nb">text</span> <span class="k">not</span> <span class="k">null</span>
-<span class="p">);</span>
-
-<span class="k">create</span>  <span class="k">table</span> <span class="n">product</span><span class="p">(</span>
-    <span class="n">id</span> <span class="nb">int</span> <span class="k">primary</span> <span class="k">key</span> <span class="n">auto_increment</span><span class="p">,</span>
-    <span class="n">name</span> <span class="nb">text</span><span class="p">,</span>
-    <span class="n">location_id</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="k">foreign</span> <span class="k">key</span> <span class="p">(</span><span class="n">location_id</span><span class="p">)</span> <span class="k">references</span> <span class="k">location</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
-<span class="p">);</span>
-
-<span class="k">insert</span> <span class="k">into</span> <span class="k">location</span>  <span class="p">(</span><span class="k">location</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">&#39;Shenzhen&#39;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="k">location</span>  <span class="p">(</span><span class="k">location</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">&#39;Shanghai&#39;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="k">location</span>  <span class="p">(</span><span class="k">location</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">&#39;Beijing&#39;</span><span class="p">);</span>
-
-<span class="k">insert</span> <span class="k">into</span> <span class="n">product</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">location_id</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">&#39;iPad&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">product</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">location_id</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">&#39;iPhone&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">product</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">location_id</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">&#39;iMac&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+</li>
+</ul>
+<h2 id="3-vs">3 vs<a class="headerlink" href="#3-vs" title="Permanent link">&para;</a></h2>
+<p>Since the CPU techonology's improvement getting slower these years, the only way to scale up is distributed computation.</p>
+<h3 id="volume">Volume<a class="headerlink" href="#volume" title="Permanent link">&para;</a></h3>
+<p>Data volume is increasing exponentially </p>
+<h3 id="velocity-streaming-data">Velocity ( Streaming data )<a class="headerlink" href="#velocity-streaming-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data is being generated fast and need to be processed fast</li>
+<li>
+<p>Static data  Streaming data</p>
+</li>
+<li>
+<p>Online Data Analytics</p>
+</li>
+<li>Late decisions 🡺 missing opportunities</li>
+</ul>
+<h3 id="variety">Variety<a class="headerlink" href="#variety" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Various formats, types, and structures</li>
+<li>Numerical, text, images, audio, video, sequences, time series, social media data, multi-dim arrays, etc…</li>
+<li>A single application can be generating/collecting many types of data  </li>
+</ul>
+<h1 id="the-frustration-of-paraller-programming">The frustration of paraller programming<a class="headerlink" href="#the-frustration-of-paraller-programming" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Race conditions</li>
+<li>Deadlock</li>
+<li>
+<p>Hard to debug: Race conditions and deadlocks are nondeterministic </p>
+</li>
+<li>
+<p>Most programming languages are low-level</p>
+<ul>
+<li>The programmer needs to manage shared memory and/or communication</li>
+<li>OpenMP is a good step forward, but still difficult for most programmers</li>
+</ul>
+</li>
+<li>
+<p>Programs written for multi-cores do not easily carry over to clusters</p>
+</li>
+</ul>
+<h2 id="the-structure-spectrum">The structure spectrum<a class="headerlink" href="#the-structure-spectrum" title="Permanent link">&para;</a></h2>
+<p>Structured (schema-first) <strong>Relational database</strong> -- Semi-structured(Schema-later)<strong>Documents XML</strong> --  Unstucture data <strong>(MongoDB)</strong></p>
+<h2 id="structured-data">Structured data<a class="headerlink" href="#structured-data" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Modify the rows is easy but modify the column costs a lot.</p>
+</blockquote>
+<ul>
+<li>
+<p>The relational data model is the most used data model</p>
+</li>
+<li>
+<p>Every relation has a schema defining each columns' type</p>
+</li>
+<li>
+<p>The programmer must statically specify the schema</p>
+</li>
+</ul>
+<h2 id="semi-structured-data">Semi-structured Data<a class="headerlink" href="#semi-structured-data" title="Permanent link">&para;</a></h2>
+<p>Json object consists of a collection name: value pairs, seperated by commas.</p>
+<p>Each value can be
+- A string
+- A number
+- A boolean
+- null
+- An array
+- a JSON object</p>
+<h1 id="how-to-handle-big-data">How to handle big data<a class="headerlink" href="#how-to-handle-big-data" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Race conditions ( use locks )</li>
+</ul>
+<h2 id="the-frustration-of-parallel-programming">The frustration of parallel programming<a class="headerlink" href="#the-frustration-of-parallel-programming" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Hard to debug</p>
+</li>
+<li>
+<p>How to migrate from one archetecture to another</p>
+</li>
+</ul>
+<h2 id="cloud-comuting">Cloud comuting<a class="headerlink" href="#cloud-comuting" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dynamic provisioning</li>
+<li>Scalability</li>
+<li>Elasticity</li>
+</ul>
+<h1 id="mapreduce">Mapreduce<a class="headerlink" href="#mapreduce" title="Permanent link">&para;</a></h1>
+<p>Map: Takes raw input and produces a key, value pair</p>
+<p>Reduce: Takes data with same key and produces outputs</p>
+<p>Shuffling and sorting
+- Hidden phase between mappers and reducers
+- Groups all key value pairs</p>
+<h2 id="example-inverted-index">Example; Inverted index<a class="headerlink" href="#example-inverted-index" title="Permanent link">&para;</a></h2>
+<p><strong>Map</strong></p>
+<p>For each (url, doc) pair</p>
+<p>Emit (keyword, url) for each keyword in doc</p>
+<p><strong>Reduce</strong></p>
+<p>For each keyword, output (keyword, list of urls)</p>
+<h2 id="example-translate-this-sql-query-into-map-reduce">Example: translate this SQL query into map reduce<a class="headerlink" href="#example-translate-this-sql-query-into-map-reduce" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="n">AuthorName</span> <span class="k">FROM</span> <span class="n">Authors</span><span class="p">,</span> <span class="n">Books</span> <span class="k">WHERE</span> <span class="n">Authors</span><span class="p">.</span><span class="n">AuthorID</span><span class="o">=</span><span class="n">Books</span><span class="p">.</span><span class="n">AuthorID</span> <span class="k">AND</span> <span class="n">Books</span><span class="p">.</span><span class="nb">Date</span><span class="o">&gt;</span><span class="mi">1980</span>
 </code></pre></div>
 
-<h3 id="first-way">First way<a class="headerlink" href="#first-way" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">select</span> <span class="n">name</span> <span class="k">from</span> <span class="n">product</span> <span class="k">inner</span> <span class="k">join</span> <span class="k">location</span> <span class="n">l</span> <span class="k">on</span> <span class="n">product</span><span class="p">.</span><span class="n">location_id</span> <span class="o">=</span> <span class="n">l</span><span class="p">.</span><span class="n">id</span> <span class="k">where</span> <span class="k">location</span> <span class="o">=</span> <span class="s1">&#39;Shenzhen&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="second-way">Second way<a class="headerlink" href="#second-way" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">select</span> <span class="n">name</span> <span class="k">from</span> <span class="n">product</span><span class="p">,</span> <span class="k">location</span> <span class="n">l</span> <span class="k">where</span> <span class="n">location_id</span> <span class="o">=</span><span class="n">l</span><span class="p">.</span><span class="n">id</span> <span class="k">and</span> <span class="k">location</span> <span class="o">=</span> <span class="s1">&#39;Shenzhen&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="outter-join">Outter join<a class="headerlink" href="#outter-join" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">iPad    Shenzhen</span>
-<span class="err">iPhone  Shanghai</span>
-<span class="err">iMac    Beijing</span>
-<span class="err">Null    Hangzhou</span>
-</code></pre></div>
-
-<h3 id="inner-join">Inner join<a class="headerlink" href="#inner-join" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">iPad    Shenzhen</span>
-<span class="err">iPhone  Shanghai</span>
-<span class="err">iMac    Beijing</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>
-</code></pre></div>
-
-<h1 id="pyspark">PySpark<a class="headerlink" href="#pyspark" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><code><span class="sx">!pip install pyspark</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Collecting pyspark
-[?25l  Downloading https://files.pythonhosted.org/packages/f0/26/198fc8c0b98580f617cb03cb298c6056587b8f0447e20fa40c5b634ced77/pyspark-3.0.1.tar.gz (204.2MB)
-[K     |████████████████████████████████| 204.2MB 61kB/s 
-[?25hCollecting py4j==0.10.9
-[?25l  Downloading https://files.pythonhosted.org/packages/9e/b6/6a4fb90cd235dc8e265a6a2067f2a2c99f0d91787f06aca4bcf7c23f3f80/py4j-0.10.9-py2.py3-none-any.whl (198kB)
-[K     |████████████████████████████████| 204kB 32.1MB/s 
-[?25hBuilding wheels for collected packages: pyspark
-  Building wheel for pyspark (setup.py) ... [?25l[?25hdone
-  Created wheel for pyspark: filename=pyspark-3.0.1-py2.py3-none-any.whl size=204612243 sha256=bde33d542b14d579dae0fe882a74c735cdcb1eb1aa95d876737953e41f19d397
-  Stored in directory: /root/.cache/pip/wheels/5e/bd/07/031766ca628adec8435bb40f0bd83bb676ce65ff4007f8e73f
-Successfully built pyspark
-Installing collected packages: py4j, pyspark
-Successfully installed py4j-0.10.9 pyspark-3.0.1
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">Row</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="err">row = Row(name=&#39;Alice&#39;, age=11)</span>
-<span class="err">row.name, row.age</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>(&#39;Alice&#39;, 11)
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="err">row = Row(name=&#39;Alice&#39;, age=11, count=1)</span>
-<span class="err">print(f&quot;Row.count: {row.count}&quot;)</span>
-<span class="err">print(f&quot;Row[&#39;count&#39;]: {row[&#39;count&#39;]}&quot;)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Row.count: &lt;built-in method count of Row object at 0x7fd3091ecaf0&gt;
-Row[&#39;count&#39;]: 1
-</code></pre></div>
+<p>Answer:</p>
+<ul>
+<li>
+<p>For each record in the ‘Authors’ table:</p>
+<ul>
+<li>Map: Emit (AuthorID, AuthorName)</li>
+</ul>
+</li>
+<li>
+<p>For each record in the ‘Books’ table:</p>
+<ul>
+<li>Map: Emit (AuthorID, Date)</li>
+</ul>
+</li>
+</ul>
+<p>Reduce:</p>
+<ul>
+<li>For each AuthorID, if Date&gt;1980, output AuthorName</li>
+</ul>
+<h2 id="where-do-we-store-data">Where do we store data<a class="headerlink" href="#where-do-we-store-data" title="Permanent link">&para;</a></h2>
+<p>Distributed store. 
+- I/O is a bottleneck
+- Building a high-end supercomputer is very costly
+- Storing all data in one place adds the risk of hardware failures</p>
+<h3 id="target-environment">Target environment<a class="headerlink" href="#target-environment" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Thousands of computers</p>
+</li>
+<li>
+<p>Distributed</p>
+</li>
+<li>
+<p>Failures are the norm</p>
+</li>
+<li>
+<p>Files are huge, but not many</p>
+<ul>
+<li>greater than 100M, usually multi-gigabyte</li>
+</ul>
+</li>
+<li>
+<p>Read/write characteristics (write-once, read-many)</p>
+<ul>
+<li>Files are mutated by appending</li>
+<li>
+<p>Once written, files are typically only read</p>
+</li>
+<li>
+<p>Large streaming reads and small random reads are typical</p>
+</li>
+</ul>
+</li>
+<li>
+<p>I/O bandwidth is more important than latency</p>
+</li>
+</ul>
+<h3 id="gfs-design-decisions">GFS design decisions<a class="headerlink" href="#gfs-design-decisions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Files stored into chunks</p>
+</li>
+<li>
+<p>Reliability through replication</p>
+</li>
+<li>
+<p>Single master to coordinate access, keep metadata</p>
+</li>
+</ul>
+<h3 id="hdfs">HDFS<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h3>
+<p>an open-source implementation for Google's MapReduce and GFS</p>
+<ul>
+<li>
+<p>Clean and simple programming abstraction</p>
+</li>
+<li>
+<p>Automatic parallelization &amp; distribution</p>
+</li>
+<li>
+<p>Fault tolerance and automatic recovery</p>
+</li>
+</ul>
+<h4 id="hadoop-architecture">Hadoop architecture<a class="headerlink" href="#hadoop-architecture" title="Permanent link">&para;</a></h4>
+<p>Single master node, many slave nodes</p>
+<ol>
+<li>
+<p>Distributed file system (HDFS)</p>
+</li>
+<li>
+<p>Execution engine (MapReduce)</p>
+</li>
+</ol>
+<h4 id="hdfs-details">HDFS details<a class="headerlink" href="#hdfs-details" title="Permanent link">&para;</a></h4>
+<p>Name node: Maintains metadata info about files</p>
+<ul>
+<li>Maps a filename to a set of blocks</li>
+<li>Maps a block to the data nodes where it resides</li>
+<li>replication engine for blocks</li>
+</ul>
+<p>Datanode</p>
+<ul>
+<li>Store data</li>
+<li>Files are divided into blocks</li>
+<li>Communicates with name nodes through periodic heartbeat</li>
+</ul>
+<p>Replication engine</p>
+<ul>
+<li>Upon detecting a DataNode failure, will choose new DataNode for replicas. </li>
+<li>Balance disk usage</li>
+<li>Balance communication traffic to DataNodes</li>
+</ul>
+<p>M data cells and n parity cells</p>
+<p>Storage efficiency = <span class="arithmatex">\(\frac{m}{m+n}\)</span></p>
+<h4 id="namenode-failure">Namenode failure<a class="headerlink" href="#namenode-failure" title="Permanent link">&para;</a></h4>
+<p>1) What is the Single point of failure in Hadoop v1?</p>
+<ul>
+<li>The single point of failure in Hadoop v1 is NameNode. If NameNode gets fail the whole Hadoop cluster will not work. Actually, there will not any data loss only the cluster work will be shut down, because NameNode is only the point of contact to all DataNodes and if the NameNode fails all communication will stop.</li>
+</ul>
+<p>2) What are the available solutions to handle single point of failure in Hadoop 1?</p>
+<ul>
+<li>To handle the single point of failure, we can use another setup configuration which can backup NameNode metadata. If the primary NameNode will fail our setup can switch to secondary (backup) and no any type to shutdown will happen for Hadoop cluster.</li>
+</ul>
+<p>3) How Single point of failure issue has been addressed in Hadoop 2?</p>
+<ul>
+<li>HDFS High Availability of Namenode is introduced with Hadoop 2. In this two separate machines are getting configured as NameNodes, where one NameNode always in working state and anther is in standby. Working Name node handling all clients request in the cluster where standby is behaving as the slave and maintaining enough state to provide a fast failover on Working Name node.</li>
+</ul>
+<h4 id="on-worker-ailure">On worker ailure<a class="headerlink" href="#on-worker-ailure" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Detect failure via periodic heartbeats</p>
+<ul>
+<li>Workers send heartbeat messages (ping) periodically to the master node</li>
+</ul>
+</li>
+<li>
+<p>Re-execute completed and in-progress map tasks</p>
+</li>
+<li>Re-execute in-progress reduce tasks</li>
+<li>Task completion committed through maste</li>
+</ul>
+<h3 id="mapreduce-a-major-step-backwards">Mapreduce: A major step backwards<a class="headerlink" href="#mapreduce-a-major-step-backwards" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Mapreduce may be a good idea for writing certain types of computations</p>
+</li>
+<li>
+<p>A giant step backward in the programming paradigm for large-scale data intensive applications</p>
+</li>
+<li>
+<p>A sub-cptimal implementation, in that it uses brute force instead of indexing</p>
+</li>
+<li>
+<p>Missing most of features that are routinely included in current DMBS</p>
+</li>
+<li>
+<p>Not novel at all</p>
+</li>
+</ul>
 <div class="codehilite"><pre><span></span><code>
 </code></pre></div>
                 
@@ -1194,7 +1365,7 @@ Row[&#39;count&#39;]: 1
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Lecture3/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Azure%20Cloud/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1203,19 +1374,19 @@ Row[&#39;count&#39;]: 1
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Lecture3
+                Azure cloud
               </div>
             </div>
           </a>
         
         
-          <a href="../Lecture5/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Lecture3/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Lecture5
+                Lecture3
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1242,8 +1413,8 @@ Row[&#39;count&#39;]: 1
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.fd16492e.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

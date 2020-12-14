@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.19753c6b.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
@@ -486,8 +486,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../MSBD5003/Lecture1/" class="md-nav__link">
-      Lecture1
+    <a href="../../../MSBD5003/Azure%20Cloud/" class="md-nav__link">
+      Azure cloud
     </a>
   </li>
 
@@ -498,8 +498,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../MSBD5003/Lecture2/" class="md-nav__link">
-      Lecture2
+    <a href="../../../MSBD5003/Big%20Data%20and%20HDFS/" class="md-nav__link">
+      Big data and hdfs
     </a>
   </li>
 
@@ -512,42 +512,6 @@
   <li class="md-nav__item">
     <a href="../../../MSBD5003/Lecture3/" class="md-nav__link">
       Lecture3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../MSBD5003/Lecture4/" class="md-nav__link">
-      Lecture4
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../MSBD5003/Lecture5/" class="md-nav__link">
-      Lecture5
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../MSBD5003/Lecture6/" class="md-nav__link">
-      Lecture6
     </a>
   </li>
 
@@ -572,6 +536,42 @@
   <li class="md-nav__item">
     <a href="../../../MSBD5003/Lecture8/" class="md-nav__link">
       Lecture8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5003/MLib/" class="md-nav__link">
+      Mlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5003/Spark%20SQL/" class="md-nav__link">
+      Spark sql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5003/Spark%20basics%20and%20RDD/" class="md-nav__link">
+      Spark basics and rdd
     </a>
   </li>
 
@@ -713,6 +713,18 @@
   <li class="md-nav__item">
     <a href="../../../MSBD5003/notebooks%20in%20class/internal/" class="md-nav__link">
       Internal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MSBD5003/notebooks%20in%20class/mllib/" class="md-nav__link">
+      Mllib
     </a>
   </li>
 
@@ -921,18 +933,6 @@
   <li class="md-nav__item">
     <a href="../../../MSBD5012/lectures/Lecture4/" class="md-nav__link">
       Lecture4
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../MSBD5012/lectures/Lecture8/" class="md-nav__link">
-      Lecture8
     </a>
   </li>
 
@@ -1254,7 +1254,7 @@ Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3
 <span class="err">#</span><span class="w"> </span><span class="n">weather</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weather</span><span class="p">.</span><span class="n">loc</span><span class="o">[</span><span class="n">mask</span><span class="o">]</span><span class="w"></span>
 
 <span class="err">#</span><span class="w"> </span><span class="n">weather</span><span class="w"></span>
-<span class="n">weather</span><span class="o">=</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="ss">&quot;/content/drive/MyDrive/courses/HKUST/MSBD5001/project/data/individual project/wr.csv&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">weather</span><span class="o">=</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="ss">&quot;/content/drive/MyDrive/courses/HKUST/MSBD5001/project/data/individual project/hong-kong-weather-histories.csv&quot;</span><span class="p">)</span><span class="w"></span>
 
 <span class="n">weather</span><span class="o">[</span><span class="n">&#39;date&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">weather</span><span class="p">.</span><span class="nf">year</span><span class="o">*</span><span class="mi">10000</span><span class="o">+</span><span class="n">weather</span><span class="p">.</span><span class="nf">month</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="n">weather</span><span class="p">.</span><span class="nf">day</span><span class="p">,</span><span class="nf">format</span><span class="o">=</span><span class="s1">&#39;%Y%m%d&#39;</span><span class="p">)</span><span class="w"></span>
 <span class="n">weather</span><span class="p">.</span><span class="k">drop</span><span class="p">(</span><span class="o">[</span><span class="n">&#39;Unnamed: 0&#39;, &#39;year&#39;, &#39;month&#39;, &#39;day&#39;</span><span class="o">]</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="w"></span>
@@ -2266,6 +2266,43 @@ Train y shape: (11905,)
 [Parallel(n_jobs=2)]: Done   4 tasks      | elapsed:   51.0s
 [Parallel(n_jobs=2)]: Done   9 tasks      | elapsed:  1.0min
 [Parallel(n_jobs=2)]: Done  14 tasks      | elapsed:  2.6min
+[Parallel(n_jobs=2)]: Done  21 tasks      | elapsed:  5.8min
+[Parallel(n_jobs=2)]: Done  28 tasks      | elapsed:  8.1min
+[Parallel(n_jobs=2)]: Done  37 tasks      | elapsed: 10.0min
+[Parallel(n_jobs=2)]: Done  46 tasks      | elapsed: 11.5min
+[Parallel(n_jobs=2)]: Done  57 tasks      | elapsed: 16.0min
+[Parallel(n_jobs=2)]: Done  68 tasks      | elapsed: 18.1min
+[Parallel(n_jobs=2)]: Done  81 tasks      | elapsed: 20.3min
+[Parallel(n_jobs=2)]: Done  94 tasks      | elapsed: 25.2min
+[Parallel(n_jobs=2)]: Done 108 out of 108 | elapsed: 29.2min finished
+/usr/local/lib/python3.6/dist-packages/xgboost/sklearn.py:242: DeprecationWarning: The nthread parameter is deprecated as of version .6.Please use n_jobs instead.nthread is deprecated.
+  &#39;nthread is deprecated.&#39;, DeprecationWarning)
+
+
+
+
+
+GridSearchCV(cv=TimeSeriesSplit(max_train_size=None, n_splits=3),
+             error_score=nan,
+             estimator=XGBRegressor(base_score=0.5, booster=&#39;gbtree&#39;,
+                                    colsample_bylevel=1, colsample_bynode=1,
+                                    colsample_bytree=1, gamma=0,
+                                    importance_type=&#39;gain&#39;, learning_rate=0.1,
+                                    max_delta_step=0, max_depth=3,
+                                    min_child_weight=1, missing=None,
+                                    n_estimators=100, n_jobs=1, nthread=None,
+                                    objectiv...
+                                    scale_pos_weight=1, seed=None, silent=None,
+                                    subsample=1, verbosity=1),
+             iid=&#39;deprecated&#39;, n_jobs=2,
+             param_grid={&#39;colsample_bytree&#39;: [0.7],
+                         &#39;learning_rate&#39;: [0.03, 0.05, 0.07],
+                         &#39;max_depth&#39;: [5, 6, 7, 8], &#39;min_child_weight&#39;: [4],
+                         &#39;n_estimators&#39;: [500], &#39;nthread&#39;: [4, 6, 8],
+                         &#39;objective&#39;: [&#39;reg:squarederror&#39;],
+                         &#39;subsample&#39;: [0.7]},
+             pre_dispatch=&#39;2*n_jobs&#39;, refit=True, return_train_score=False,
+             scoring=None, verbose=10)
 </code></pre></div>
 <h2 id="training-by-using-dnn">Training by using DNN<a class="headerlink" href="#training-by-using-dnn" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
@@ -2652,28 +2689,28 @@ GridSearchCV(cv=None, error_score=nan,
 Name: speed, Length: 2101, dtype: float64
 </code></pre></div>
 <div class="codehilite"><pre><span></span><code><span class="err">y_pred2 = xgb.predict(X_test)</span>
-<span class="err">y_pred3 = random_forest.predict(X_test)</span>
-<span class="err">y_pred4 = svr.predict(X_test)</span>
-<span class="err">y_pred5 = tree_reg.predict(X_test)</span>
-<span class="err">y_pred6 = ridge.predict(X_test)</span>
-<span class="err">y_pred7 = mlp_reg.predict(X_test)</span>
+<span class="err"># y_pred3 = random_forest.predict(X_test)</span>
+<span class="err"># y_pred4 = svr.predict(X_test)</span>
+<span class="err"># y_pred5 = tree_reg.predict(X_test)</span>
+<span class="err"># y_pred6 = ridge.predict(X_test)</span>
+<span class="err"># y_pred7 = mlp_reg.predict(X_test)</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="n">MSE_DNN</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">MSE_DNN</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
 <span class="n">MSE_rg</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred2</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
-<span class="n">MSE_rf</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred3</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
-<span class="n">MSE_tree</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred5</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
-<span class="n">MSE_svr</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred4</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
-<span class="n">MSE_ridge</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred6</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-<span class="n">MSE_mlp</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred7</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">MSE_rf</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred3</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">MSE_tree</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred5</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">MSE_svr</span><span class="o">=</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred4</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">MSE_ridge</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred6</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">MSE_mlp</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_pred7</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 
 <span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for dnn is: {MSE_DNN}&quot;</span><span class="p">)</span>
 <span class="n">print</span><span class="p">(</span><span class="s1">&#39;MSE for XGBoost is &#39;</span><span class="o">+</span><span class="n">str</span><span class="p">(</span><span class="n">MSE_rg</span><span class="p">))</span>
-<span class="n">print</span><span class="p">(</span><span class="s1">&#39;MSE for RandomForest is &#39;</span><span class="o">+</span><span class="n">str</span><span class="p">(</span><span class="n">MSE_rf</span><span class="p">))</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for decision is: {MSE_tree}&quot;</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for svr is: {MSE_svr}&quot;</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for ridge is: {MSE_ridge}&quot;</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for neural network is: {MSE_mlp}&quot;</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">print</span><span class="p">(</span><span class="s1">&#39;MSE for RandomForest is &#39;</span><span class="o">+</span><span class="n">str</span><span class="p">(</span><span class="n">MSE_rf</span><span class="p">))</span>
+<span class="o">#</span> <span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for decision is: {MSE_tree}&quot;</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for svr is: {MSE_svr}&quot;</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for ridge is: {MSE_ridge}&quot;</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;MSE for neural network is: {MSE_mlp}&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>MSE for dnn is: 17.01656963733734
@@ -3055,8 +3092,8 @@ MSE for XGBoost is 14.680223822593183
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

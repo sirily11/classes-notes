@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.19753c6b.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
@@ -475,8 +475,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Lecture1/" class="md-nav__link">
-      Lecture1
+    <a href="../../Azure%20Cloud/" class="md-nav__link">
+      Azure cloud
     </a>
   </li>
 
@@ -487,8 +487,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Lecture2/" class="md-nav__link">
-      Lecture2
+    <a href="../../Big%20Data%20and%20HDFS/" class="md-nav__link">
+      Big data and hdfs
     </a>
   </li>
 
@@ -501,42 +501,6 @@
   <li class="md-nav__item">
     <a href="../../Lecture3/" class="md-nav__link">
       Lecture3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Lecture4/" class="md-nav__link">
-      Lecture4
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Lecture5/" class="md-nav__link">
-      Lecture5
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Lecture6/" class="md-nav__link">
-      Lecture6
     </a>
   </li>
 
@@ -561,6 +525,42 @@
   <li class="md-nav__item">
     <a href="../../Lecture8/" class="md-nav__link">
       Lecture8
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MLib/" class="md-nav__link">
+      Mlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spark%20SQL/" class="md-nav__link">
+      Spark sql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Spark%20basics%20and%20RDD/" class="md-nav__link">
+      Spark basics and rdd
     </a>
   </li>
 
@@ -704,6 +704,18 @@
   <li class="md-nav__item">
     <a href="../internal/" class="md-nav__link">
       Internal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mllib/" class="md-nav__link">
+      Mllib
     </a>
   </li>
 
@@ -998,18 +1010,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../MSBD5012/lectures/Lecture8/" class="md-nav__link">
-      Lecture8
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1157,16 +1157,16 @@ Alice 11
 <div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cse</span><span class="o">.</span><span class="n">ust</span><span class="o">.</span><span class="n">hk</span><span class="o">/</span><span class="n">msbd5003</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">building</span><span class="o">.</span><span class="n">csv</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>--2020-10-06 11:49:18--  https://www.cse.ust.hk/msbd5003/data/building.csv
+<div class="highlight"><pre><span></span><code>--2020-12-09 02:43:31--  https://www.cse.ust.hk/msbd5003/data/building.csv
 Resolving www.cse.ust.hk (www.cse.ust.hk)... 143.89.40.27
 Connecting to www.cse.ust.hk (www.cse.ust.hk)|143.89.40.27|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 544 [text/plain]
-Saving to: ‘building.csv.1’
+Saving to: ‘building.csv’
 
-building.csv.1      100%[===================&gt;]     544  --.-KB/s    in 0s
+building.csv        100%[===================&gt;]     544  --.-KB/s    in 0s
 
-2020-10-06 11:49:20 (30.9 MB/s) - ‘building.csv.1’ saved [544/544]
+2020-12-09 02:43:33 (25.1 MB/s) - ‘building.csv’ saved [544/544]
 </code></pre></div>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Data file at https://www.cse.ust.hk/msbd5003/data/building.csv</span>
 
@@ -1300,29 +1300,29 @@ building.csv.1      100%[===================&gt;]     544  --.-KB/s    in 0s
 <span class="err">!</span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cse</span><span class="o">.</span><span class="n">ust</span><span class="o">.</span><span class="n">hk</span><span class="o">/</span><span class="n">msbd5003</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">SalesOrderHeader</span><span class="o">.</span><span class="n">csv</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>--2020-10-06 11:51:08--  https://www.cse.ust.hk/msbd5003/data/Customer.csv
+<div class="highlight"><pre><span></span><code>--2020-12-09 03:07:42--  https://www.cse.ust.hk/msbd5003/data/Customer.csv
 Resolving www.cse.ust.hk (www.cse.ust.hk)... 143.89.40.27
 Connecting to www.cse.ust.hk (www.cse.ust.hk)|143.89.40.27|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 199491 (195K) [text/plain]
 Saving to: ‘Customer.csv’
 
-Customer.csv        100%[===================&gt;] 194.82K   320KB/s    in 0.6s
+Customer.csv        100%[===================&gt;] 194.82K   242KB/s    in 0.8s
 
-2020-10-06 11:51:11 (320 KB/s) - ‘Customer.csv’ saved [199491/199491]
+2020-12-09 03:07:44 (242 KB/s) - ‘Customer.csv’ saved [199491/199491]
 
---2020-10-06 11:51:12--  https://www.cse.ust.hk/msbd5003/data/Product.csv
+--2020-12-09 03:07:44--  https://www.cse.ust.hk/msbd5003/data/Product.csv
 Resolving www.cse.ust.hk (www.cse.ust.hk)... 143.89.40.27
 Connecting to www.cse.ust.hk (www.cse.ust.hk)|143.89.40.27|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 1355634 (1.3M) [text/plain]
 Saving to: ‘Product.csv’
 
-Product.csv         100%[===================&gt;]   1.29M  1.05MB/s    in 1.2s
+Product.csv         100%[===================&gt;]   1.29M  1.06MB/s    in 1.2s
 
-2020-10-06 11:51:15 (1.05 MB/s) - ‘Product.csv’ saved [1355634/1355634]
+2020-12-09 03:07:46 (1.06 MB/s) - ‘Product.csv’ saved [1355634/1355634]
 
---2020-10-06 11:51:15--  https://www.cse.ust.hk/msbd5003/data/SalesOrderDetail.csv
+--2020-12-09 03:07:46--  https://www.cse.ust.hk/msbd5003/data/SalesOrderDetail.csv
 Resolving www.cse.ust.hk (www.cse.ust.hk)... 143.89.40.27
 Connecting to www.cse.ust.hk (www.cse.ust.hk)|143.89.40.27|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -1331,9 +1331,9 @@ Saving to: ‘SalesOrderDetail.csv’
 
 SalesOrderDetail.cs 100%[===================&gt;]  55.44K   137KB/s    in 0.4s
 
-2020-10-06 11:51:18 (137 KB/s) - ‘SalesOrderDetail.csv’ saved [56766/56766]
+2020-12-09 03:07:47 (137 KB/s) - ‘SalesOrderDetail.csv’ saved [56766/56766]
 
---2020-10-06 11:51:18--  https://www.cse.ust.hk/msbd5003/data/SalesOrderHeader.csv
+--2020-12-09 03:07:47--  https://www.cse.ust.hk/msbd5003/data/SalesOrderHeader.csv
 Resolving www.cse.ust.hk (www.cse.ust.hk)... 143.89.40.27
 Connecting to www.cse.ust.hk (www.cse.ust.hk)|143.89.40.27|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -1342,7 +1342,7 @@ Saving to: ‘SalesOrderHeader.csv’
 
 SalesOrderHeader.cs 100%[===================&gt;]   8.48K  --.-KB/s    in 0s
 
-2020-10-06 11:51:19 (79.4 MB/s) - ‘SalesOrderHeader.csv’ saved [8680/8680]
+2020-12-09 03:07:49 (131 MB/s) - ‘SalesOrderHeader.csv’ saved [8680/8680]
 </code></pre></div>
 <h3 id="rewriting-sql-with-dataframe-api">Rewriting SQL with DataFrame API<a class="headerlink" href="#rewriting-sql-with-dataframe-api" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Load data from csv files</span>
@@ -2424,8 +2424,8 @@ only showing top 20 rows
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

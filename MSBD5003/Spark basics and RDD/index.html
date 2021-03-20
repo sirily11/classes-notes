@@ -9,8 +9,8 @@
       
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.19753c6b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
       
     
@@ -29,9 +29,9 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
@@ -51,6 +51,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
       
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -66,36 +67,39 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="Class Notes" class="md-header-nav__button md-logo" aria-label="Class Notes">
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Class Notes" class="md-header__button md-logo" aria-label="Class Notes" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Class Notes
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Spark basics and rdd
             
           </span>
         </div>
+      </div>
+    </div>
+    <div class="md-header__options">
       
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -104,10 +108,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -137,17 +141,19 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Class Notes" class="md-nav__button md-logo" aria-label="Class Notes">
+    <a href="../.." title="Class Notes" class="md-nav__button md-logo" aria-label="Class Notes" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     Class Notes
@@ -159,292 +165,234 @@
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
-    <label class="md-nav__link" for="nav-1">
-      Msbd5001
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Msbd5001" data-md-level="1">
-      <label class="md-nav__title" for="nav-1">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Msbd5012
         <span class="md-nav__icon md-icon"></span>
-        Msbd5001
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Msbd5012" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Msbd5012
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/Lecture%202/" class="md-nav__link">
-      Lecture 2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/Lecture%203/" class="md-nav__link">
-      Lecture 3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/Lecture%209/" class="md-nav__link">
-      Lecture 9
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/Lecture1/" class="md-nav__link">
-      Lecture1
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/Lecture4/" class="md-nav__link">
-      Lecture4
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/Lecture6/" class="md-nav__link">
-      Lecture6
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+  
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-7" type="checkbox" id="nav-1-7" >
-    <label class="md-nav__link" for="nav-1-7">
-      Project
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Project" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-7">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" data-md-state="indeterminate" type="checkbox" id="__nav_1_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1_1">
+        Lectures
         <span class="md-nav__icon md-icon"></span>
-        Project
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Lectures" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Lectures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5012/lectures/Lecture%202/" class="md-nav__link">
+        Lecture 2
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5012/lectures/Lecture1/" class="md-nav__link">
+        Lecture1
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5012/lectures/Lecture3/" class="md-nav__link">
+        Lecture3
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/project/Copy%20of%20Individual%20Project/" class="md-nav__link">
-      Copy of individual project
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5012/lectures/Lecture4/" class="md-nav__link">
+        Lecture4
+      </a>
+    </li>
+  
+
           
+        </ul>
+      </nav>
+    </li>
+  
+
           
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/project/Group%20Project/" class="md-nav__link">
-      Group project
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/project/Individual%20Project/" class="md-nav__link">
-      Individual project
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5001/project/msbd5001-fall2020/" class="md-nav__link">
-      Msbd5001-fall2020
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
-    <label class="md-nav__link" for="nav-2">
-      Msbd5008
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Msbd5008" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
         Msbd5008
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5008/Lecture2/" class="md-nav__link">
-      Lecture2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5008/Lecture3/" class="md-nav__link">
-      Lecture3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5008/Lecture4/" class="md-nav__link">
-      Lecture4
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5008/Lecture5/" class="md-nav__link">
-      Lecture5
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5008/Lectyre6/" class="md-nav__link">
-      Lectyre6
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6" >
-    <label class="md-nav__link" for="nav-2-6">
-      Homework
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Homework" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-6">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Msbd5008" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Msbd5008
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5008/Lecture2/" class="md-nav__link">
+        Lecture2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5008/Lecture3/" class="md-nav__link">
+        Lecture3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5008/Lecture4/" class="md-nav__link">
+        Lecture4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5008/Lecture5/" class="md-nav__link">
+        Lecture5
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5008/Lectyre6/" class="md-nav__link">
+        Lectyre6
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_6" checked>
+      
+      <label class="md-nav__link" for="__nav_2_6">
         Homework
+        <span class="md-nav__icon md-icon"></span>
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Homework" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Homework
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5008/homework/homework1/" class="md-nav__link">
+        Homework1
+      </a>
+    </li>
+  
+
           
+        </ul>
+      </nav>
+    </li>
+  
+
           
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5008/homework/homework1/" class="md-nav__link">
-      Homework1
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
@@ -452,143 +400,377 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    <label class="md-nav__link" for="nav-3">
-      Msbd5003
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Msbd5003" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Msbd5006
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Msbd5006" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Msbd5006
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5006/Lecture%201/" class="md-nav__link">
+        Lecture 1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5006/Lecture%202/" class="md-nav__link">
+        Lecture 2
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Msbd5001
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Msbd5001" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Msbd5001
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/Lecture%202/" class="md-nav__link">
+        Lecture 2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/Lecture%203/" class="md-nav__link">
+        Lecture 3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/Lecture%209/" class="md-nav__link">
+        Lecture 9
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/Lecture1/" class="md-nav__link">
+        Lecture1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/Lecture4/" class="md-nav__link">
+        Lecture4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/Lecture6/" class="md-nav__link">
+        Lecture6
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_4_7" checked>
+      
+      <label class="md-nav__link" for="__nav_4_7">
+        Project
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Project" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/project/Copy%20of%20Individual%20Project/" class="md-nav__link">
+        Copy of individual project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/project/Group%20Project/" class="md-nav__link">
+        Group project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/project/Individual%20Project/" class="md-nav__link">
+        Individual project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MSBD5001/project/msbd5001-fall2020/" class="md-nav__link">
+        Msbd5001-fall2020
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
         Msbd5003
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Algorithm/" class="md-nav__link">
-      Algorithm
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Azure%20Cloud/" class="md-nav__link">
-      Azure cloud
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Big%20Data%20and%20HDFS/" class="md-nav__link">
-      Big data and hdfs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../HBase/" class="md-nav__link">
-      Hbase
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Lecture3/" class="md-nav__link">
-      Lecture3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../MLib/" class="md-nav__link">
-      Mlib
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Spark%20SQL/" class="md-nav__link">
-      Spark sql
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Spark%20Streaming/" class="md-nav__link">
-      Spark streaming
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Spark basics and rdd
         <span class="md-nav__icon md-icon"></span>
       </label>
+      <nav class="md-nav" aria-label="Msbd5003" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Msbd5003
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Algorithm/" class="md-nav__link">
+        Algorithm
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure%20Cloud/" class="md-nav__link">
+        Azure cloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Big%20Data%20and%20HDFS/" class="md-nav__link">
+        Big data and hdfs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HBase/" class="md-nav__link">
+        Hbase
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture3/" class="md-nav__link">
+        Lecture3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MLib/" class="md-nav__link">
+        Mlib
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Spark%20SQL/" class="md-nav__link">
+        Spark sql
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Spark%20Streaming/" class="md-nav__link">
+        Spark streaming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Spark basics and rdd
-    </a>
-    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Spark basics and rdd
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Spark basics and rdd
+      </a>
+      
+        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -599,7 +781,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#why-is-mapreduce-bad" class="md-nav__link">
@@ -831,391 +1013,252 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internal/" class="md-nav__link">
+        Internal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../internal/" class="md-nav__link">
-      Internal
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-11" type="checkbox" id="nav-3-11" >
-    <label class="md-nav__link" for="nav-3-11">
-      Homeworks
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Homeworks" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-11">
-        <span class="md-nav__icon md-icon"></span>
-        Homeworks
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../homeworks/HW4/" class="md-nav__link">
-      Hw4
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../homeworks/hw1/" class="md-nav__link">
-      Hw1
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../homeworks/hw2/" class="md-nav__link">
-      Hw2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../homeworks/hw3/" class="md-nav__link">
-      Hw3
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-12" type="checkbox" id="nav-3-12" >
-    <label class="md-nav__link" for="nav-3-12">
-      Notebooks in class
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Notebooks in class" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-12">
-        <span class="md-nav__icon md-icon"></span>
-        Notebooks in class
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../notebooks%20in%20class/DC/" class="md-nav__link">
-      Dc
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../notebooks%20in%20class/PMI/" class="md-nav__link">
-      Pmi
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../notebooks%20in%20class/graph/" class="md-nav__link">
-      Graph
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../notebooks%20in%20class/internal/" class="md-nav__link">
-      Internal
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../notebooks%20in%20class/mllib/" class="md-nav__link">
-      Mllib
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../notebooks%20in%20class/rdd/" class="md-nav__link">
-      Rdd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../notebooks%20in%20class/sparksql/" class="md-nav__link">
-      Sparksql
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-13" type="checkbox" id="nav-3-13" >
-    <label class="md-nav__link" for="nav-3-13">
-      Projects
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Projects" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-13">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_11" data-md-state="indeterminate" type="checkbox" id="__nav_5_11" checked>
+      
+      <label class="md-nav__link" for="__nav_5_11">
         Projects
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../projects/Project/" class="md-nav__link">
-      Project
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
-    <label class="md-nav__link" for="nav-4">
-      Msbd5006
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Msbd5006" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        Msbd5006
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Projects" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_11">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/Project/" class="md-nav__link">
+        Project
+      </a>
+    </li>
+  
+
           
+        </ul>
+      </nav>
+    </li>
+  
+
           
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5006/Lecture%201/" class="md-nav__link">
-      Lecture 1
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5006/Lecture%202/" class="md-nav__link">
-      Lecture 2
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
+            
+  
+  
+  
     
+    <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_12" data-md-state="indeterminate" type="checkbox" id="__nav_5_12" checked>
       
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
-    <label class="md-nav__link" for="nav-5">
-      Msbd5012
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Msbd5012" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__link" for="__nav_5_12">
+        Homeworks
         <span class="md-nav__icon md-icon"></span>
-        Msbd5012
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Homeworks" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_12">
+          <span class="md-nav__icon md-icon"></span>
+          Homeworks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../homeworks/HW4/" class="md-nav__link">
+        Hw4
+      </a>
+    </li>
+  
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../homeworks/hw1/" class="md-nav__link">
+        Hw1
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../homeworks/hw2/" class="md-nav__link">
+        Hw2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../homeworks/hw3/" class="md-nav__link">
+        Hw3
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" >
-    <label class="md-nav__link" for="nav-5-1">
-      Lectures
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Lectures" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-1">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_13" data-md-state="indeterminate" type="checkbox" id="__nav_5_13" checked>
+      
+      <label class="md-nav__link" for="__nav_5_13">
+        Notebooks in class
         <span class="md-nav__icon md-icon"></span>
-        Lectures
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="Notebooks in class" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_13">
+          <span class="md-nav__icon md-icon"></span>
+          Notebooks in class
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks%20in%20class/DC/" class="md-nav__link">
+        Dc
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks%20in%20class/PMI/" class="md-nav__link">
+        Pmi
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks%20in%20class/graph/" class="md-nav__link">
+        Graph
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5012/lectures/Lecture%202/" class="md-nav__link">
-      Lecture 2
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks%20in%20class/internal/" class="md-nav__link">
+        Internal
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks%20in%20class/mllib/" class="md-nav__link">
+        Mllib
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks%20in%20class/rdd/" class="md-nav__link">
+        Rdd
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5012/lectures/Lecture1/" class="md-nav__link">
-      Lecture1
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks%20in%20class/sparksql/" class="md-nav__link">
+        Sparksql
+      </a>
+    </li>
+  
+
           
+        </ul>
+      </nav>
+    </li>
+  
+
           
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5012/lectures/Lecture3/" class="md-nav__link">
-      Lecture3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MSBD5012/lectures/Lecture4/" class="md-nav__link">
-      Lecture4
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -1225,7 +1268,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1239,7 +1283,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#why-is-mapreduce-bad" class="md-nav__link">
@@ -1476,13 +1520,13 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
                 <h1 id="spark-basics-and-rdd">Spark basics and RDD<a class="headerlink" href="#spark-basics-and-rdd" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><code><span class="sx">!pip install pyspark</span>
+<div class="codehilite"><pre><span></span><code><span class="sx">!pip install pyspark</span><span class="w"></span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>Collecting pyspark
@@ -1503,7 +1547,7 @@ Successfully installed py4j-0.10.9 pyspark-3.0.1
 <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err">fruits = sc.textFile(&#39;/content/drive/MyDrive/courses/HKUST/MSBD5003/data/fruits.txt&#39;, 4)</span>
+<div class="codehilite"><pre><span></span><code>fruits = sc.textFile(&#39;/content/drive/MyDrive/courses/HKUST/MSBD5003/data/fruits.txt&#39;, 4)
 </code></pre></div>
 
 <h2 id="why-is-mapreduce-bad">Why is Map/Reduce bad?<a class="headerlink" href="#why-is-mapreduce-bad" title="Permanent link">&para;</a></h2>
@@ -1626,17 +1670,17 @@ Allows faster reuse and fault recovery</p>
 <li>The variables within the closure sent to each executor are copies.</li>
 <li>This closure is serialized and sent to each executor from the driver when an action is invoked.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nv">rdd</span> <span class="o">=</span> <span class="nv">sc</span>.<span class="nv">parallelize</span><span class="ss">(</span><span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">))</span>
 
-<span class="o">#</span> <span class="n">Wrong</span><span class="p">:</span> <span class="n">Don</span><span class="err">&#39;</span><span class="n">t</span> <span class="k">do</span> <span class="n">this</span><span class="o">!!</span>
-<span class="n">def</span> <span class="n">increment_counter</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">counter</span>
-    <span class="n">counter</span> <span class="o">+=</span> <span class="n">x</span>
+# <span class="nv">Wrong</span>: <span class="nv">Don</span><span class="s1">&#39;</span><span class="s">t do this!!</span>
+<span class="nv">def</span> <span class="nv">increment_counter</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>:
+    <span class="nv">global</span> <span class="nv">counter</span>
+    <span class="nv">counter</span> <span class="o">+=</span> <span class="nv">x</span>
 
-<span class="n">print</span><span class="p">(</span><span class="n">rdd</span><span class="p">.</span><span class="n">collect</span><span class="p">())</span>
-<span class="n">rdd</span><span class="p">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">increment_counter</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Counter: {counter}&quot;</span><span class="p">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">rdd</span>.<span class="nv">collect</span><span class="ss">())</span>
+<span class="nv">rdd</span>.<span class="nv">foreach</span><span class="ss">(</span><span class="nv">increment_counter</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">f</span><span class="s2">&quot;</span><span class="s">Counter: {counter}</span><span class="s2">&quot;</span><span class="ss">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -1652,33 +1696,33 @@ Counter: 0
 
 <div class="highlight"><pre><span></span><code>[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code>A = sc.parallelize(range(10))
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
-<span class="o">#</span> <span class="n">B</span><span class="p">.</span><span class="k">cache</span><span class="p">()</span>
-<span class="n">print</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="k">count</span><span class="p">())</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">print</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="k">count</span><span class="p">())</span>
+x = 5
+B = A.filter(lambda z: z &lt; x)
+# B.cache()
+print(B.count())
+x = 3
+print(B.count())
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>5
 3
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code>A = sc.parallelize(range(10))
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
-<span class="o">#</span> <span class="n">B</span><span class="p">.</span><span class="k">cache</span><span class="p">()</span>
-<span class="n">B</span><span class="p">.</span><span class="n">unpersist</span><span class="p">()</span>
-<span class="o">#</span> <span class="n">print</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">print</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">collect</span><span class="p">())</span>
+x = 5
+B = A.filter(lambda z: z &lt; x)
+# B.cache()
+B.unpersist()
+# print(B.take(10))
+print(B.collect())
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="o">#</span><span class="n">print</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">print</span><span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">collect</span><span class="p">())</span>
-<span class="o">#</span> <span class="n">collect</span><span class="p">()</span> <span class="n">doesn</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">always</span> <span class="n">re</span><span class="o">-</span><span class="n">collect</span> <span class="k">data</span> <span class="o">-</span> <span class="n">bad</span> <span class="n">design</span><span class="o">!</span>
-<span class="o">#</span> <span class="n">Always</span> <span class="n">use</span> <span class="n">take</span><span class="p">()</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">collect</span><span class="p">()</span>
+x = 3
+#print(B.take(10))
+print(B.collect())
+# collect() doesn&#39;t always re-collect data - bad design!
+# Always use take() instead of collect()
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[0, 1, 2, 3, 4]
@@ -1704,39 +1748,39 @@ Counter: 0
 <p>Accumulators do not change the lazy evaluation model of Spark. If they are being updated within an operation on an RDD, their value is only updated once that RDD is computed as part of an action. Consequently, accumulator updates are not guaranteed to be executed when made within a lazy transformation like map(). </p>
 <p>Update in transformations may be applied more than once if tasks or job stages are re-executed. See example.</p>
 <p>Suggestion: Avoid using accumulators whenever possible.  Use reduce() instead.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">accum</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">accumulator</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code>rdd = sc.parallelize(range(10))
+accum = sc.accumulator(0)
 
-<span class="n">def</span> <span class="k">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">accum</span>
-    <span class="n">accum</span> <span class="o">+=</span> <span class="n">x</span>
+def g(x):
+    global accum
+    accum += x
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">rdd</span><span class="p">.</span><span class="n">foreach</span><span class="p">(</span><span class="k">g</span><span class="p">)</span>
+a = rdd.foreach(g)
 
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Accumulator value: {accum.value}&quot;</span><span class="p">)</span>
+print(f&quot;Accumulator value: {accum.value}&quot;)
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>Accumulator value: 45
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">accum</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">accumulator</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">rdd</span> <span class="o">=</span> <span class="nv">sc</span>.<span class="nv">parallelize</span><span class="ss">(</span><span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">))</span>
+<span class="nv">accum</span> <span class="o">=</span> <span class="nv">sc</span>.<span class="nv">accumulator</span><span class="ss">(</span><span class="mi">0</span><span class="ss">)</span>
 
-<span class="n">def</span> <span class="k">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">accum</span>
-    <span class="n">accum</span> <span class="o">+=</span> <span class="n">x</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<span class="nv">def</span> <span class="nv">g</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>:
+    <span class="nv">global</span> <span class="nv">accum</span>
+    <span class="nv">accum</span> <span class="o">+=</span> <span class="nv">x</span>
+    <span class="k">return</span> <span class="nv">x</span> <span class="o">*</span> <span class="nv">x</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">rdd</span><span class="p">.</span><span class="k">map</span><span class="p">(</span><span class="k">g</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Accumulator value: {accum.value}&quot;</span><span class="p">)</span>
-<span class="n">a</span><span class="p">.</span><span class="k">cache</span><span class="p">()</span>
-<span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="k">count</span><span class="p">()</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Accumulator value: {accum.value}&quot;</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Reduce: {rdd.reduce(lambda x, y: x+y)}&quot;</span><span class="p">)</span>
-<span class="o">#</span> <span class="k">If</span> <span class="n">we</span> <span class="n">uncomment</span> <span class="k">cache</span><span class="p">,</span> <span class="k">then</span> <span class="n">the</span> <span class="n">value</span> <span class="n">will</span> <span class="n">become</span> <span class="k">to</span> <span class="mi">90</span> <span class="n">since</span>
-<span class="o">#</span> <span class="n">accumulator</span> <span class="n">will</span> <span class="n">be</span> <span class="n">executed</span> <span class="n">twice</span>
-<span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="k">count</span><span class="p">()</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Accumulator value: {accum.value}&quot;</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Reduce: {rdd.reduce(lambda x, y: x+y)}&quot;</span><span class="p">)</span>
+<span class="nv">a</span> <span class="o">=</span> <span class="nv">rdd</span>.<span class="nv">map</span><span class="ss">(</span><span class="nv">g</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">f</span><span class="s2">&quot;</span><span class="s">Accumulator value: {accum.value}</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="nv">a</span>.<span class="nv">cache</span><span class="ss">()</span>
+<span class="nv">tmp</span> <span class="o">=</span> <span class="nv">a</span>.<span class="nv">count</span><span class="ss">()</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">f</span><span class="s2">&quot;</span><span class="s">Accumulator value: {accum.value}</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">f</span><span class="s2">&quot;</span><span class="s">Reduce: {rdd.reduce(lambda x, y: x+y)}</span><span class="s2">&quot;</span><span class="ss">)</span>
+# <span class="k">If</span> <span class="nv">we</span> <span class="nv">uncomment</span> <span class="nv">cache</span>, <span class="k">then</span> <span class="nv">the</span> <span class="nv">value</span> <span class="nv">will</span> <span class="nv">become</span> <span class="nv">to</span> <span class="mi">90</span> <span class="nv">since</span>
+# <span class="nv">accumulator</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">executed</span> <span class="nv">twice</span>
+<span class="nv">tmp</span> <span class="o">=</span> <span class="nv">a</span>.<span class="nv">count</span><span class="ss">()</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">f</span><span class="s2">&quot;</span><span class="s">Accumulator value: {accum.value}</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">f</span><span class="s2">&quot;</span><span class="s">Reduce: {rdd.reduce(lambda x, y: x+y)}</span><span class="s2">&quot;</span><span class="ss">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>Accumulator value: 0
@@ -1754,24 +1798,24 @@ Reduce: 45
 <p>More efficient than sending closures to tasks</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="k">Using</span> <span class="k">join</span>
-<span class="n">products</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;Apple&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="ss">&quot;Orange&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="ss">&quot;TV&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="ss">&quot;Computer&quot;</span><span class="p">)])</span>
-<span class="n">trans</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">162</span><span class="p">,</span> <span class="ss">&quot;Error&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">135</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">53</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">))])</span>
+<div class="codehilite"><pre><span></span><code># Using join
+products = sc.parallelize([(1, &quot;Apple&quot;), (2, &quot;Orange&quot;), (3, &quot;TV&quot;), (5, &quot;Computer&quot;)])
+trans = sc.parallelize([(1, (134, &quot;OK&quot;)), (3, (34, &quot;OK&quot;)), (5, (162, &quot;Error&quot;)), (1, (135, &quot;OK&quot;)), (2, (53, &quot;OK&quot;)), (1, (45, &quot;OK&quot;))])
 
-<span class="n">print</span><span class="p">(</span><span class="n">trans</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">products</span><span class="p">).</span><span class="n">take</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+print(trans.join(products).take(20))
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[(1, ((134, &#39;OK&#39;), &#39;Apple&#39;)), (1, ((135, &#39;OK&#39;), &#39;Apple&#39;)), (1, ((45, &#39;OK&#39;), &#39;Apple&#39;)), (5, ((162, &#39;Error&#39;), &#39;Computer&#39;)), (2, ((53, &#39;OK&#39;), &#39;Orange&#39;)), (3, ((34, &#39;OK&#39;), &#39;TV&#39;))]
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="k">Using</span> <span class="n">broadcast</span>
-<span class="n">products</span> <span class="o">=</span> <span class="err">{</span><span class="mi">1</span><span class="p">:</span> <span class="ss">&quot;Apple&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="ss">&quot;Orange&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="ss">&quot;TV&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="ss">&quot;Computer&quot;</span><span class="err">}</span>
-<span class="n">trans</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">134</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">162</span><span class="p">,</span> <span class="ss">&quot;Error&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">135</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">53</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="ss">&quot;OK&quot;</span><span class="p">))])</span>
+<div class="codehilite"><pre><span></span><code># Using broadcast
+products = {1: &quot;Apple&quot;, 2: &quot;Orange&quot;, 3: &quot;TV&quot;, 5: &quot;Computer&quot;}
+trans = sc.parallelize([(1, (134, &quot;OK&quot;)), (3, (34, &quot;OK&quot;)), (5, (162, &quot;Error&quot;)), (1, (135, &quot;OK&quot;)), (2, (53, &quot;OK&quot;)), (1, (45, &quot;OK&quot;))])
 
-<span class="n">broadcasted_products</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">products</span><span class="p">)</span>
+broadcasted_products = sc.broadcast(products)
 
-<span class="n">results</span> <span class="o">=</span> <span class="n">trans</span><span class="p">.</span><span class="k">map</span><span class="p">(</span><span class="n">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">broadcasted_products</span><span class="p">.</span><span class="n">value</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="o">#</span>  <span class="n">results</span> <span class="o">=</span> <span class="n">trans</span><span class="p">.</span><span class="k">map</span><span class="p">(</span><span class="n">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">products</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="n">print</span><span class="p">(</span><span class="n">results</span><span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+results = trans.map(lambda x: (x[0], broadcasted_products.value[x[0]], x[1]))
+#  results = trans.map(lambda x: (x[0], products[x[0]], x[1]))
+print(results.take(20))
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[(1, &#39;Apple&#39;, (134, &#39;OK&#39;)), (3, &#39;TV&#39;, (34, &#39;OK&#39;)), (5, &#39;Computer&#39;, (162, &#39;Error&#39;)), (1, &#39;Apple&#39;, (135, &#39;OK&#39;)), (2, &#39;Orange&#39;, (53, &#39;OK&#39;)), (1, &#39;Apple&#39;, (45, &#39;OK&#39;))]
@@ -1792,22 +1836,22 @@ Reduce: 45
  &#39;yrrebwarts&#39;]
 </code></pre></div>
 <h3 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">shortFruits = fruits.filter(lambda fruit: len(fruit) &lt;= 5)</span>
-<span class="err">shortFruits.collect()</span>
+<div class="codehilite"><pre><span></span><code>shortFruits = fruits.filter(lambda fruit: len(fruit) &lt;= 5)
+shortFruits.collect()
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[&#39;apple&#39;, &#39;grap&#39;, &#39;lemon&#39;]
 </code></pre></div>
 <h3 id="flatmap">FlatMap<a class="headerlink" href="#flatmap" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">characters = fruits.flatMap(lambda fruit: list(fruit))</span>
-<span class="err">print(characters.collect())</span>
+<div class="codehilite"><pre><span></span><code>characters = fruits.flatMap(lambda fruit: list(fruit))
+print(characters.collect())
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[&#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;, &#39;b&#39;, &#39;a&#39;, &#39;n&#39;, &#39;a&#39;, &#39;n&#39;, &#39;a&#39;, &#39;c&#39;, &#39;a&#39;, &#39;n&#39;, &#39;a&#39;, &#39;r&#39;, &#39;y&#39;, &#39; &#39;, &#39;m&#39;, &#39;e&#39;, &#39;l&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;, &#39;r&#39;, &#39;a&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;, &#39;m&#39;, &#39;o&#39;, &#39;n&#39;, &#39;o&#39;, &#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;g&#39;, &#39;e&#39;, &#39;p&#39;, &#39;i&#39;, &#39;n&#39;, &#39;e&#39;, &#39;a&#39;, &#39;p&#39;, &#39;p&#39;, &#39;l&#39;, &#39;e&#39;, &#39;s&#39;, &#39;t&#39;, &#39;r&#39;, &#39;a&#39;, &#39;w&#39;, &#39;b&#39;, &#39;e&#39;, &#39;r&#39;, &#39;r&#39;, &#39;y&#39;]
 </code></pre></div>
 <h3 id="union">Union<a class="headerlink" href="#union" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">new_fruits = fruits.union(fruits)</span>
-<span class="err">new_fruits.collect()</span>
+<div class="codehilite"><pre><span></span><code>new_fruits = fruits.union(fruits)
+new_fruits.collect()
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[&#39;apple&#39;,
@@ -1828,8 +1872,8 @@ Reduce: 45
  &#39;strawberry&#39;]
 </code></pre></div>
 <h3 id="intersection">Intersection<a class="headerlink" href="#intersection" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">new_fruits = fruits.intersection(fruits)</span>
-<span class="err">new_fruits.collect()</span>
+<div class="codehilite"><pre><span></span><code>new_fruits = fruits.intersection(fruits)
+new_fruits.collect()
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[&#39;orange&#39;,
@@ -1844,20 +1888,20 @@ Reduce: 45
 <h2 id="rdd-actions">RDD Actions<a class="headerlink" href="#rdd-actions" title="Permanent link">&para;</a></h2>
 <h3 id="collect">collect<a class="headerlink" href="#collect" title="Permanent link">&para;</a></h3>
 <h3 id="take">take<a class="headerlink" href="#take" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">first3Fruits = fruits.take(3)</span>
-<span class="err">print(first3Fruits)</span>
+<div class="codehilite"><pre><span></span><code>first3Fruits = fruits.take(3)
+print(first3Fruits)
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[&#39;apple&#39;, &#39;banana&#39;, &#39;canary melon&#39;]
 </code></pre></div>
 <h3 id="count">count<a class="headerlink" href="#count" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">fruits.count()</span>
+<div class="codehilite"><pre><span></span><code>fruits.count()
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>8
 </code></pre></div>
 <h3 id="reduce">reduce<a class="headerlink" href="#reduce" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">fruits.map(lambda fruit: set(fruit)).reduce(lambda x, y: x.union(y))</span>
+<div class="codehilite"><pre><span></span><code>fruits.map(lambda fruit: set(fruit)).reduce(lambda x, y: x.union(y))
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>{&#39; &#39;,
@@ -1912,8 +1956,8 @@ Reduce: 45
 <span class="c1"># Loads all URLs with other URL(s) link to from input file </span>
 <span class="c1"># and initialize ranks of them to one.</span>
 <span class="n">ranks</span> <span class="o">=</span> <span class="n">links</span><span class="o">.</span><span class="n">mapValues</span><span class="p">(</span><span class="k">lambda</span> <span class="n">neighbors</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;ranks&#39;</span><span class="p">,</span> <span class="n">ranks</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;links&#39;</span><span class="p">,</span> <span class="n">links</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ranks&#39;</span><span class="p">,</span> <span class="n">ranks</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;links&#39;</span><span class="p">,</span> <span class="n">links</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
 <span class="c1"># Calculates and updates URL ranks continuously using PageRank algorithm.</span>
 <span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numOfIterations</span><span class="p">):</span>
     <span class="c1"># Calculates URL contributions to the rank of other URLs.</span>
@@ -1928,7 +1972,7 @@ Reduce: 45
     <span class="c1"># ranks = contribs.reduceByKey(add).mapValues(lambda rank: rank * 0.85 + 0.15)</span>
     <span class="n">ranks</span> <span class="o">=</span> <span class="n">contribs</span><span class="o">.</span><span class="n">reduceByKey</span><span class="p">(</span><span class="n">add</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.85</span> <span class="o">+</span> <span class="mf">0.15</span><span class="p">))</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">ranks</span><span class="o">.</span><span class="n">top</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ranks</span><span class="o">.</span><span class="n">top</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>ranks [(&#39;1&#39;, 1.0), (&#39;4&#39;, 1.0), (&#39;2&#39;, 1.0), (&#39;3&#39;, 1.0)]
@@ -2007,28 +2051,28 @@ if k &gt; mid then <span class="arithmatex">\(A = A[mid+1,n-1], k= k— mid-1\)<
 </li>
 <li>gotostep 1</li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Linear</span><span class="o">-</span><span class="k">time</span> <span class="n">selection</span>
+<div class="codehilite"><pre><span></span><code># <span class="nv">Linear</span><span class="o">-</span><span class="nv">time</span> <span class="nv">selection</span>
 
-<span class="k">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">26</span><span class="p">]</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="n">parallelize</span><span class="p">(</span><span class="k">data</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nv">data</span> <span class="o">=</span> [<span class="mi">34</span>, <span class="mi">67</span>, <span class="mi">21</span>, <span class="mi">56</span>, <span class="mi">47</span>, <span class="mi">89</span>, <span class="mi">12</span>, <span class="mi">44</span>, <span class="mi">74</span>, <span class="mi">43</span>, <span class="mi">26</span>]
+<span class="nv">A</span> <span class="o">=</span> <span class="nv">sc</span>.<span class="nv">parallelize</span><span class="ss">(</span><span class="nv">data</span>,<span class="mi">2</span><span class="ss">)</span>
+<span class="nv">k</span> <span class="o">=</span> <span class="mi">4</span>
 
-<span class="n">while</span> <span class="k">True</span><span class="p">:</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="k">first</span><span class="p">()</span>
-    <span class="n">A1</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span>
-    <span class="n">A2</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">lambda</span> <span class="n">z</span><span class="p">:</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span>
-    <span class="n">A1</span><span class="p">.</span><span class="k">cache</span><span class="p">()</span>
-    <span class="n">A2</span><span class="p">.</span><span class="k">cache</span><span class="p">()</span>
-    <span class="n">mid</span> <span class="o">=</span> <span class="n">A1</span><span class="p">.</span><span class="k">count</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">mid</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
-        <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">break</span>
+<span class="k">while</span> <span class="nv">True</span>:
+    <span class="nv">x</span> <span class="o">=</span> <span class="nv">A</span>.<span class="nv">first</span><span class="ss">()</span>
+    <span class="nv">A1</span> <span class="o">=</span> <span class="nv">A</span>.<span class="nv">filter</span><span class="ss">(</span><span class="nv">lambda</span> <span class="nv">z</span>: <span class="nv">z</span> <span class="o">&lt;</span> <span class="nv">x</span><span class="ss">)</span>
+    <span class="nv">A2</span> <span class="o">=</span> <span class="nv">A</span>.<span class="nv">filter</span><span class="ss">(</span><span class="nv">lambda</span> <span class="nv">z</span>: <span class="nv">z</span> <span class="o">&gt;</span> <span class="nv">x</span><span class="ss">)</span>
+    <span class="nv">A1</span>.<span class="nv">cache</span><span class="ss">()</span>
+    <span class="nv">A2</span>.<span class="nv">cache</span><span class="ss">()</span>
+    <span class="nv">mid</span> <span class="o">=</span> <span class="nv">A1</span>.<span class="nv">count</span><span class="ss">()</span>
+    <span class="k">if</span> <span class="nv">mid</span> <span class="o">==</span> <span class="nv">k</span>:
+        <span class="nv">print</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+        <span class="k">break</span>
 
-    <span class="k">if</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">mid</span><span class="p">:</span>
-        <span class="n">A</span> <span class="o">=</span> <span class="n">A1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">A</span> <span class="o">=</span> <span class="n">A2</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="nv">k</span> <span class="o">&lt;</span> <span class="nv">mid</span>:
+        <span class="nv">A</span> <span class="o">=</span> <span class="nv">A1</span>
+    <span class="k">else</span>:
+        <span class="nv">A</span> <span class="o">=</span> <span class="nv">A2</span>
+        <span class="nv">k</span> <span class="o">=</span> <span class="nv">k</span> <span class="o">-</span> <span class="nv">mid</span> <span class="o">-</span> <span class="mi">1</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>43
@@ -2059,14 +2103,14 @@ p(x=0) = 0.8, p(x=1)=0.2, p(y=0)=0.25, p(y=1)=0.75</p>
 <li>pmi(x=1;y=0)  =   1.584963</li>
 <li>pmi(x=1;y=1)  =   -1.584963</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">lines = sc.textFile(&#39;/content/drive/MyDrive/courses/HKUST/MSBD5003/data/adj_noun_pairs.txt&#39;, 4)</span>
+<div class="codehilite"><pre><span></span><code>lines = sc.textFile(&#39;/content/drive/MyDrive/courses/HKUST/MSBD5003/data/adj_noun_pairs.txt&#39;, 4)
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err"># Converting lines into word pairs. </span>
-<span class="err"># Data is dirty: some lines have more than 2 words, so filter them out.</span>
-<span class="err">pairs = lines.map(lambda l: tuple(l.split())).filter(lambda p: len(p)==2)</span>
-<span class="err">pairs.cache()</span>
-<span class="err">pairs.take(5)</span>
+<div class="codehilite"><pre><span></span><code># Converting lines into word pairs. 
+# Data is dirty: some lines have more than 2 words, so filter them out.
+pairs = lines.map(lambda l: tuple(l.split())).filter(lambda p: len(p)==2)
+pairs.cache()
+pairs.take(5)
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[(&#39;early&#39;, &#39;radical&#39;),
@@ -2075,17 +2119,17 @@ p(x=0) = 0.8, p(x=1)=0.2, p(y=0)=0.25, p(y=1)=0.75</p>
  (&#39;violent&#39;, &#39;means&#39;),
  (&#39;positive&#39;, &#39;label&#39;)]
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="err">N = pairs.count()</span>
-<span class="err">N</span>
+<div class="codehilite"><pre><span></span><code>N = pairs.count()
+N
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>3162674
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="err"># Compute the frequency of each pair.</span>
-<span class="err"># Ignore pairs that not frequent enough</span>
-<span class="err">pair_freqs = pairs.map(lambda p: (p,1)).reduceByKey(lambda f1, f2: f1 + f2) \</span>
-<span class="err">                  .filter(lambda pf: pf[1] &gt;= 100)</span>
-<span class="err">pair_freqs.take(5)</span>
+<div class="codehilite"><pre><span></span><code># Compute the frequency of each pair.
+# Ignore pairs that not frequent enough
+pair_freqs = pairs.map(lambda p: (p,1)).reduceByKey(lambda f1, f2: f1 + f2) \
+                  .filter(lambda pf: pf[1] &gt;= 100)
+pair_freqs.take(5)
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[((&#39;human&#39;, &#39;society&#39;), 154),
@@ -2094,17 +2138,17 @@ p(x=0) = 0.8, p(x=1)=0.2, p(y=0)=0.25, p(y=1)=0.75</p>
  ((&#39;civil&#39;, &#39;war&#39;), 2236),
  ((&#39;social&#39;, &#39;class&#39;), 155)]
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="err"># Computing the frequencies of the adjectives and the nouns</span>
-<span class="err">a_freqs = pairs.map(lambda p: (p[0],1)).reduceByKey(lambda x,y: x+y)</span>
-<span class="err">n_freqs = pairs.map(lambda p: (p[1],1)).reduceByKey(lambda x,y: x+y)</span>
+<div class="codehilite"><pre><span></span><code># Computing the frequencies of the adjectives and the nouns
+a_freqs = pairs.map(lambda p: (p[0],1)).reduceByKey(lambda x,y: x+y)
+n_freqs = pairs.map(lambda p: (p[1],1)).reduceByKey(lambda x,y: x+y)
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err"># Broadcasting the adjective and noun frequencies. </span>
-<span class="err">#a_dict = a_freqs.collectAsMap()</span>
-<span class="err">#a_dict = sc.parallelize(a_dict).map(lambda x: x)</span>
-<span class="err">n_dict = sc.broadcast(n_freqs.collectAsMap())</span>
-<span class="err">a_dict = sc.broadcast(a_freqs.collectAsMap())</span>
-<span class="err">a_dict.value[&#39;violent&#39;]</span>
+<div class="codehilite"><pre><span></span><code># Broadcasting the adjective and noun frequencies. 
+#a_dict = a_freqs.collectAsMap()
+#a_dict = sc.parallelize(a_dict).map(lambda x: x)
+n_dict = sc.broadcast(n_freqs.collectAsMap())
+a_dict = sc.broadcast(a_freqs.collectAsMap())
+a_dict.value[&#39;violent&#39;]
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>1191
@@ -2119,12 +2163,12 @@ p(x=0) = 0.8, p(x=1)=0.2, p(y=0)=0.25, p(y=1)=0.75</p>
     <span class="k">return</span> <span class="n">pmi</span><span class="p">,</span> <span class="p">(</span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err"># Computing the PMI for all pairs.</span>
-<span class="err">scored_pairs = pair_freqs.map(pmi_score)</span>
+<div class="codehilite"><pre><span></span><code># <span class="nv">Computing</span> <span class="nv">the</span> <span class="nv">PMI</span> <span class="k">for</span> <span class="nv">all</span> <span class="nv">pairs</span>.
+<span class="nv">scored_pairs</span> <span class="o">=</span> <span class="nv">pair_freqs</span>.<span class="nv">map</span><span class="ss">(</span><span class="nv">pmi_score</span><span class="ss">)</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="err"># Printing the most strongly associated pairs. </span>
-<span class="err">scored_pairs.top(10)</span>
+<div class="codehilite"><pre><span></span><code># Printing the most strongly associated pairs. 
+scored_pairs.top(10)
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>[(14.41018838546462, (&#39;magna&#39;, &#39;carta&#39;)),
@@ -2155,40 +2199,38 @@ p(x=0) = 0.8, p(x=1)=0.2, p(y=0)=0.25, p(y=1)=0.75</p>
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../Spark%20Streaming/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Spark%20Streaming/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Spark streaming
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Spark streaming
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="../internal/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Internal
             </div>
-          </a>
-        
-        
-          <a href="../internal/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Internal
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2198,6 +2240,7 @@ p(x=0) = 0.8, p(x=1)=0.2, p(y=0)=0.25, p(y=1)=0.75</p>
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
     </div>
@@ -2205,19 +2248,13 @@ p(x=0) = 0.8, p(x=1)=0.2, p(y=0)=0.25, p(y=1)=0.75</p>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-      <script src="../../assets/javascripts/vendor.0ac82a11.min.js"></script>
-      <script src="../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['instant', 'navigation.expand'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       

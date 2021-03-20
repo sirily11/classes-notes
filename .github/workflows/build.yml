@@ -28,6 +28,7 @@ jobs:
           ci: true
       - run: pipenv run mkdocs build
       - run: cp CNAME site/
+      - run: cp -r files site/files
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

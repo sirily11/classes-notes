@@ -2,9 +2,10 @@ docs/
 .vscode/
 mkdocs.yml
 site/
-*.json
+
+client_secrets.json
+
 Untitled
 *.lock
 screenshot_ocr/build
 screenshot_ocr/dist
-!/files/*.json

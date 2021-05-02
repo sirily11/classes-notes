@@ -7,3 +7,4 @@ Untitled
 *.lock
 screenshot_ocr/build
 screenshot_ocr/dist
+!/files/*.json

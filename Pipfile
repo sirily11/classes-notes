@@ -8,7 +8,7 @@ autopep8 = "*"
 
 [packages]
 docs-generator = "*"
-nbconvert = "==6.0.4"
+nbconvert = "==6.5.1"
 pydrive = "*"
 certifi = "*"
 pytesseract = "*"
